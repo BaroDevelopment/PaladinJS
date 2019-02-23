@@ -12,7 +12,7 @@ module.exports = {
 	params: ['`[command]` - Command to execute in host\'s terminal'],
 	category: 'owner',
 	userPermissions: ['BOT_OWNER'],
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/owner/ssh.html',
+	documentationURL: 'https://paladin.netlify.com/owner/ssh.html',
 	examples: [
 		`\`${gPrefix}ssh sudo apt-get update\``,
 		`\`${gPrefix}ssh ls\``,

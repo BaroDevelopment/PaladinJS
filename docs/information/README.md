@@ -25,3 +25,5 @@ Here is an overview about all available information commands
 >[Speedtest Command](./speedtest.md)
 
 >[EmojiInfo Command](./emojiinfo.md)
+
+<CustomLayout/>

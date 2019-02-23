@@ -36,3 +36,5 @@ This command will only work in `nsfw` flagged channels
 ![Avatar Usage Preview](https://cdn.discordapp.com/attachments/469576672128139275/545585251284549682/unknown.png)
 
 ---
+
+<CustomLayout/>

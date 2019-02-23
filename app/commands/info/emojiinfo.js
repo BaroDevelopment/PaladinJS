@@ -5,7 +5,7 @@ module.exports = {
 	name: 'EmojiInfo',
 	description: 'Get an overview about a specific emoji',
 	category: 'info',
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/information/emojiinfo.html',
+	documentationURL: 'https://paladin.netlify.com/information/emojiinfo.html',
 	usage: [`\`${gPrefix}emojiinfo [emoji name]\``, `\`${gPrefix}emojiinfo [emoji id]\``, `\`${gPrefix}emojiinfo [:emoji:]\``],
 	guildOnly: true,
 	args: true,

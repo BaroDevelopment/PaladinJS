@@ -8,7 +8,7 @@ module.exports = {
 	description: '',
 	category: 'info',
 	guildOnly: false,
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/information/speedtest.html',
+	documentationURL: 'https://paladin.netlify.com/information/speedtest.html',
 	usage: [`${gPrefix}ping`],
 	cooldown: 60,
 	async execute(message) {

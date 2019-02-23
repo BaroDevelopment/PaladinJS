@@ -6,7 +6,7 @@ module.exports = {
 	name: 'Purge',
 	description: 'Bulk-delete messages from a channel',
 	category: 'moderation',
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/moderation/purge.html',
+	documentationURL: 'https://paladin.netlify.com/moderation/purge.html',
 	usage: [`\`${gPrefix}purge [number]\``],
 	args: true,
 	guildOnly: true,

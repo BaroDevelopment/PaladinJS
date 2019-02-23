@@ -18,7 +18,7 @@ module.exports = {
     category: 'owner',
     userPermissions: ['BOT_OWNER'],
     params: ['`[Javascript code]` - Your Javascript code to execute.'],
-    documentationURL: 'https://ylngyang.github.io/PaladinJS/owner/eval.html',
+    documentationURL: 'https://paladin.netlify.com/owner/eval.html',
     examples: [
         `\`${gPrefix}eval Math.pow(5, 8)\``,
         `\`${gPrefix}eval 5 + 6\``,

@@ -8,7 +8,7 @@ module.exports = {
 	name: 'UserInfo',
 	description: 'Get an overview about a user',
 	category: 'info',
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/information/userinfo.html',
+	documentationURL: 'https://paladin.netlify.com/information/userinfo.html',
 	usage: [`\`${gPrefix}userinfo [@user]\``, `\`${gPrefix}userinfo [user id]\``, `\`${gPrefix}userinfo [user-name]\``],
 	args: false,
 	guildOnly: true,

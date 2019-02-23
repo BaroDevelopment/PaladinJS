@@ -9,3 +9,5 @@ Here is an overview about all kind of search commands
 >[Urban Command](./urban.md)
 
 >[Dictionary Command](./dictionary.md)
+
+<CustomLayout/>

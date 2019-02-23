@@ -30,3 +30,4 @@ Display full information about a discord server
 
 ![Avatar Usage Preview](https://media.discordapp.net/attachments/469576672128139275/546443634610929665/Unbenannt-1.png?width=338&height=676)
 
+<CustomLayout/>

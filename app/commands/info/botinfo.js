@@ -10,7 +10,7 @@ module.exports = {
 	name: 'BotInfo',
 	description: 'Get an overview about Paladin Stats',
 	category: 'info',
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/information/botinfo.html',
+	documentationURL: 'https://paladin.netlify.com/information/botinfo.html',
 	args: false,
 	guildOnly: false,
 	aliases: ['paladin', 'stats', 'binfo', 'info'],

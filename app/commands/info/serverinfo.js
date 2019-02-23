@@ -40,7 +40,7 @@ module.exports = {
 	name: 'ServerInfo',
 	description: 'Display full information about a discord server',
 	category: 'info',
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/information/serverinfo.html',
+	documentationURL: 'https://paladin.netlify.com/information/serverinfo.html',
 	usage: [`\`${gPrefix}serverinfo\``, `\`${gPrefix}serverinfo [server id]\``, `\`${gPrefix}serverinfo [name-name]\``],
 	args: false,
 	guildOnly: false,

@@ -20,3 +20,4 @@ Used to test the speed of the Bot/Host
 ### Previev
 
 ![Avatar Usage Preview](https://cdn.discordapp.com/attachments/469576672128139275/547449191916371982/SpeedTest.gif)
+<CustomLayout/>

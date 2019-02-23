@@ -10,7 +10,7 @@ module.exports = {
 	name: 'RoleInfo',
 	description: 'Get an overview about a role',
 	category: 'info',
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/information/roleinfo.html',
+	documentationURL: 'https://paladin.netlify.com/information/roleinfo.html',
 	usage: [`\`${gPrefix}roleinfo [@role]\``, `\`${gPrefix}roleinfo [role id]\``, `\`${gPrefix}roleinfo [role-name]\``],
 	args: true,
 	guildOnly: true,

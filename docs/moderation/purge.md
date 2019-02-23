@@ -55,3 +55,4 @@ Purge only messages from Stalista#7777
 
 `-purge 100 @Stalista#7777`
 
+<CustomLayout/>

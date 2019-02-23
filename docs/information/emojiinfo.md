@@ -38,3 +38,4 @@ The bot is searching for the emote only in the server where the command has been
 
 ![Avatar Usage Preview](https://cdn.discordapp.com/attachments/469576672128139275/547888871829143554/unknown.png)
 
+<CustomLayout/>

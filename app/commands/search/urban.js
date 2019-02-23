@@ -8,7 +8,7 @@ module.exports = {
 	name: 'Urban',
 	description: 'Query the Urban Dictionary API',
 	category: 'search',
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/information/urban.html',
+	documentationURL: 'https://paladin.netlify.com/search/urban.html',
 	usage: [`\`${gPrefix}urban [search-term]\``],
 	args: true,
 	guildOnly: false,

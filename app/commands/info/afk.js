@@ -8,7 +8,7 @@ module.exports = {
 	name: 'AFK',
 	description: 'Set your afk message',
 	category: 'info',
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/information/afk.html',
+	documentationURL: 'https://paladin.netlify.com/information/afk.html',
 	usage: [`\`${gPrefix}afk [afk message]\``],
 	examples: [`\`${gPrefix}afk sleeping ... leave me a DM\``],
 	params: ['\`[afk message]\` - The message to display if someone mentions you.'],

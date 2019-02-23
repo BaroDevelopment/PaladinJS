@@ -24,3 +24,5 @@ A oxford dictionary lookup to get the definition of a word
 `-define [search-term]`
 
 ![Avatar Usage Preview](https://cdn.discordapp.com/attachments/469576672128139275/547087804753117204/unknown.png)
+
+<CustomLayout/>

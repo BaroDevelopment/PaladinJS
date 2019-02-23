@@ -7,10 +7,7 @@
 <style lang="stylus">
     @import "../styles/theme.styl"
     @import "../styles/code.styl"
-    /*@import "../styles/arrow.styl"*/
     @import "../styles/custom-blocks.styl"
-    /*@import "../styles/toc.styl"*/
     /*@import "../styles/wrapper.styl"*/
     /*@import "../styles/nprogress.styl"*/
-    /*@import "../styles/mobile.styl"*/
 </style>

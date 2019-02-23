@@ -8,7 +8,7 @@ module.exports = {
 	name: 'Ban',
 	description: 'Ban a member from the server. Banned user will get a DM with reason aswell.',
 	category: 'moderation',
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/moderation/ban.html',
+	documentationURL: 'https://paladin.netlify.com/moderation/ban.html',
 	usage: [`\`${gPrefix}ban [@user]\``, `\`${gPrefix}ban [user id]\``, `\`${gPrefix}ban [user-name]\``],
 	args: true,
 	guildOnly: true,

@@ -5,7 +5,7 @@ module.exports = {
 	category: 'search',
 	guildOnly: false,
 	args: true,
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/information/lmgtfy.html',
+	documentationURL: 'https://paladin.netlify.com/search/lmgtfy.html',
 	usage: [`${gPrefix}lmgtfy [search-term]`],
 	aliases: ['lmgify'],
 	params: ['[`search term` - Your query string' ],

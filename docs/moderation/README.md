@@ -7,3 +7,5 @@ Here is an overview about all available moderation commands
 >[Ban Command](./ban.md)
 
 >[Purge Command](./purge.md)
+
+<CustomLayout/>

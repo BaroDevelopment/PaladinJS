@@ -81,6 +81,13 @@ module.exports = {
 					],
 				},
 			],
+			'/util/': [
+				{
+					title: 'MarkDown',
+					collapsable: false,
+					children: ['/util/'],
+				},
+			],
 		},
 	},
 };

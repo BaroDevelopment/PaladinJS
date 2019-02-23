@@ -10,7 +10,7 @@ module.exports = {
 	name: 'ChannelInfo',
 	description: 'Get an overview about a channel',
 	category: 'info',
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/information/channelinfo.html',
+	documentationURL: 'https://paladin.netlify.com/information/channelinfo.html',
 	usage: [`\`${gPrefix}channelinfo [#channel]\``, `\`${gPrefix}channelinfo [channel id]\``, `\`${gPrefix}channelinfo [channel-name]\``],
 	guildOnly: true,
 	aliases: ['cinfo'],

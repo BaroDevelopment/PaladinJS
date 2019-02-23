@@ -5,10 +5,10 @@ const { images } = require('../util/statics.js');
 
 module.exports = {
 	name: 'Ping',
-	description: '',
+	description: 'Get Discord websocket and rest pings',
 	category: 'info',
 	guildOnly: false,
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/information/ping.html',
+	documentationURL: 'https://paladin.netlify.com/information/ping.html',
 	usage: [`${gPrefix}ping`],
 	botPermissions: ['ADD_REACTIONS'],
 	cooldown: 60,

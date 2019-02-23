@@ -7,7 +7,7 @@ module.exports = {
 	description: 'Get the avatar URL of the tagged user(s), or your own avatar.',
 	category: 'info',
 	guildOnly: false,
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/information/avatar.html',
+	documentationURL: 'https://paladin.netlify.com/information/avatar.html',
 	usage: [`${gPrefix}avatar`, `${gPrefix}avatar [@user]`, `${gPrefix}avatar [user-name]`, `${gPrefix}avatar [user-id]`],
 	aliases: ['icon', 'pfp'],
 	params: ['`[@user]` - user as mention', '`[@user1 @user2 ... @user5]` - get up to 5 avatars.',

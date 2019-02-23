@@ -19,7 +19,7 @@ module.exports = {
 	category: 'info',
 	args: false,
 	guildOnly: false,
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/information/help.html',
+	documentationURL: 'https://paladin.netlify.com/information/help.html',
 	execute(message, args) {
 		const { commands } = message.client;
 		const embed = new Discord.MessageEmbed().setColor('#FF00FF');

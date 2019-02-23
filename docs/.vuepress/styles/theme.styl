@@ -5,9 +5,13 @@ $MQMobile = 719px
 $MQMobileNarrow = 419px
 $purple = #fc52fb;
 
+html
+  background-color $bg-color
+
 body
   background-color $bg-color
   color desaturate(lighten($bg-color, 80%), 50%)
+  height: 100%
 
 .search-box
   input
@@ -106,7 +110,8 @@ body
 blockquote
   font-size: 1.2rem;
   color: #999;
-  border-left: 0.25rem solid $purple;
+  border-left: 0.25rem solid cyan;
+  background rgba(255, 255, 255, 0.08)
 
 table
   border-collapse: collapse;
@@ -124,10 +129,9 @@ th, td
   padding: 0.6em 1em;
   border-color: hsla(0, 0%, 100%, .1);
 
-
 a
   font-weight: 500;
-  color: $accentColor;
+  color: dodgerblue;
   text-decoration: none;
 
 p a code
@@ -150,7 +154,7 @@ p, ul, ol
 hr
   border 1
   border-top: 1px solid #eaecef;
-  border-top-color: hsla(0,0%,100%,.1);
+  border-top-color: hsla(0, 0%, 100%, .1);
 
 strong
   font-weight: 600
@@ -159,3 +163,6 @@ strong
   background-color: $darkPrimaryBg
   &:hover
     background-color: magenta
+
+.page-edit .last-updated .prefix
+  color desaturate(lighten($bg-color, 80%), 50%)

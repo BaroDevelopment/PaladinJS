@@ -6,7 +6,7 @@ module.exports = {
 	name: 'Google',
 	description: 'Google a word',
 	category: 'search',
-	documentationURL: '',
+	documentationURL: 'https://paladin.netlify.com/search/google.html',
 	usage: [`\`${gPrefix}google [search-term]\``],
 	args: true,
 	guildOnly: false,

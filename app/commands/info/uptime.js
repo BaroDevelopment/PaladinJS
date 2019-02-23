@@ -6,7 +6,7 @@ module.exports = {
 	description: '',
 	category: 'info',
 	guildOnly: false,
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/information/uptime.html',
+	documentationURL: 'https://paladin.netlify.com/information/uptime.html',
 	usage: [`${gPrefix}uptime`],
 	cooldown: 60,
 	execute(message) {

@@ -7,7 +7,7 @@ module.exports = {
 	name: 'Dictionary',
 	description: 'A oxford dictionary lookup to get the definition of a word',
 	category: 'search',
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/information/dictionary.html',
+	documentationURL: 'https://paladin.netlify.com/search/dictionary.html',
 	usage: [`\`${gPrefix}define [search-term]\``],
 	args: true,
 	guildOnly: false,

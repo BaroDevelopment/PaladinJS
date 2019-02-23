@@ -8,7 +8,7 @@ module.exports = {
 	name: 'Kick',
 	description: 'Kick a member from the server. Kicked user will get a DM with reason aswell.',
 	category: 'moderation',
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/moderation/kick.html',
+	documentationURL: 'https://paladin.netlify.com/moderation/kick.html',
 	usage: [`\`${gPrefix}kick [@user]\``, `\`${gPrefix}kick [user id]\``, `\`${gPrefix}kick [user-name]\``],
 	args: true,
 	guildOnly: true,

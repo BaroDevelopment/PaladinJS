@@ -7,7 +7,7 @@ module.exports = {
 	description: 'Get an overview about the shards',
 	category: 'info',
 	guildOnly: false,
-	documentationURL: 'https://ylngyang.github.io/PaladinJS/information/shardinfo.html',
+	documentationURL: 'https://paladin.netlify.com/information/shardinfo.html',
 	usage: [`${gPrefix}shardinfo`],
 	aliases: ['shards', 'shard'],
 	cooldown: 60,

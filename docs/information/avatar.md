@@ -40,3 +40,5 @@ If **no** user mentioned then bot will show only your avatar.
 ![Avatar Usage Preview](https://cdn.discordapp.com/attachments/469576672128139275/544257031905738752/unknown.png)
 
 ![Avatar Usage Preview](https://cdn.discordapp.com/attachments/469576672128139275/544257818631471114/unknown.png)
+
+<CustomLayout/>
