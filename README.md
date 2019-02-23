@@ -20,6 +20,6 @@ This page only gives very basic information, for the detailed information about 
 
 - [Live Support Server](https://discord.gg/RFSYyCU )
 
-- [Documentation](https://ylngyang.github.io/PaladinJS/ )
+- [Documentation](https://paladin.netlify.com/)
 
 <img align="center" src="https://discordapp.com/api/guilds/393207704211947521/widget.png?style=banner2"/>
