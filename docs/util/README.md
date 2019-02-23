@@ -2,8 +2,6 @@
 
 This is a normal text.
 
----
-
 ### Bold Text
 ```
 **Bold text**
@@ -11,8 +9,6 @@ __Bold text__
 ```
 **Bold text**
 __Bold text__
-
----
 
 ### Italic Text
 ```
@@ -22,15 +18,12 @@ _Italic text_
 *Italic text*
 _Italic text_
 
----
-
 ### Strikethrough Text
 ```
 ~~Strikethrough text~~
 ```
 ~~Strikethrough text~~
 
----
 
 ### Masked link
 ```
@@ -42,8 +35,6 @@ _Italic text_
 
 [Paladin Website](https://www.paladinbot.online/)
 
----
-
 ### Inline Code
 ```
 `npm install`
@@ -51,8 +42,6 @@ _Italic text_
 ```
 `npm install`
 [`Inline code with a link`](/README.md)
-
----
 
 ### Item listing
 ```
@@ -69,8 +58,6 @@ _Italic text_
     * Ac tristique libero volutpat at
     + Facilisis in pretium nisl aliquet
     - Nulla volutpat aliquam velit
-
----
 
 ### Tables
 ```
@@ -105,8 +92,6 @@ Right aligned columns
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
 
----
-
 ## Links
 ```
 [link text](https://dev.nodeca.com)
@@ -118,8 +103,8 @@ Right aligned columns
 [link with title](https://nodeca.github.io/pica/demo/ "title text!")
 
 
-# HEADERS
----
+## HEADERS
+
 ```
 # h1
 
@@ -145,8 +130,6 @@ Right aligned columns
 ##### h5
 
 ###### h6
-
----
 
 ### Embeds
 
@@ -178,8 +161,6 @@ Theme components `are subject` to the same [browser API access restrictions](./R
 Theme components are subject to the same [browser API access restrictions](./README.md).
 :::
 
----
-
 ### Blockquotes
 ```
 >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
@@ -196,8 +177,6 @@ invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
 >> ...by using additional greater-than signs right next to each other...
 > > > ...or with spaces between arrows.
 
----
-
 ### Badges
 ```
 Badge <Badge text="beta" type="warn" vertical="middle" /> <Badge text="0.10.1+" />
@@ -210,8 +189,6 @@ Props:
 Badge <Badge text="beta" type="warn" vertical="middle" /> <Badge text="0.10.1+" />
 
 [List of Badges](https://github.com/Naereen/badges)
-
----
 
 ### Code
 ````
@@ -231,8 +208,6 @@ npm install eslint
 npm install --global eslint
 ```
 
----
----
 #### Line Highlighting
 ````
 ```json{3,4,5,6}
@@ -267,13 +242,10 @@ npm install --global eslint
 }
 ```
 
----
----
 ```diff
 - client.login(config.token);
 + client.login(token);
 ```
----
 
 ## Line Numbers
 
@@ -286,8 +258,6 @@ module.exports = {
   }
 }  
 ```
-
----
 
 ### Advanced Configuration
 
@@ -307,7 +277,6 @@ module.exports = {
   }
 }
 ```
----
 
 ### Import Code Snippets <Badge text="beta" type="warn"/> <Badge text="0.10.1+" type="tip"/>
 
@@ -351,11 +320,10 @@ It also supports [line highlighting](#line-highlighting-in-code-blocks):
 
 ![Successfully created application](https://discordjs.guide/assets/img/create-app.cb14ef85.png)
 
----
 > using local file
-![Bot application](../images/created-bot.png "Title")
 
----
+![Bot application](../images/branding/book-large.png "Title")
+
 
 ### [Emojis](https://github.com/markdown-it/markdown-it-emoji)
 ```
