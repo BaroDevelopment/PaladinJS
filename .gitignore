@@ -1,0 +1,20 @@
+# app #
+/app/node_modules
+app/package-lock.json
+/app/config.json
+
+# IntelliJ # 
+.idea
+
+# Testing folder #
+test/*
+
+# Visual Studio Code #
+.settings/*
+.project
+
+# modules # 
+node_modules
+
+# docs # 
+public

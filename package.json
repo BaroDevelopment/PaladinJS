@@ -1,0 +1,16 @@
+{
+  "name": "vuepress-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "serve": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.0.0-alpha.39"
+  },
+  "dependencies": {
+    "semver": "^5.5.1"
+  }
+}

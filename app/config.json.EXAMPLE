@@ -1,0 +1,14 @@
+{
+  "gPrefix": "--",
+  "token": "",
+  "botOwners": ["246974486665101313", "394154377100787714"],
+  "database": "postgresql://DB_USER_NAME:DB_USER_PW@IP:PORT/DB_NAME",
+  "google_search_engine_id": "",
+  "google_api_key": "",
+  "commandsEnabled": false,
+    "host": {
+      "ip": "",
+      "username": "",
+      "password": ""
+    }
+}

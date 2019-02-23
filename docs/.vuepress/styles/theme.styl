@@ -1,0 +1,286 @@
+$vue-color = #4fc08d
+$bg-color = #151515
+$MQNarrow = 959px
+$MQMobile = 719px
+$MQMobileNarrow = 419px
+$purple = #dd6efd;
+
+html, body
+  padding: 0;
+  margin: 0;
+
+body
+  font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  background-color $bg-color
+  color desaturate(lighten($bg-color, 80%), 50%)
+
+.page
+  padding-left: $sidebarWidth;
+
+.search-box
+  input
+    border-color desaturate(lighten($bg-color, 30%), 30%)
+    background-color #2a2a2a
+    color desaturate(lighten($bg-color, 80%), 50%)
+    &.focused
+      border-color: desaturate(lighten($purple, 10%), 10%)
+
+  .suggestions
+    background-color desaturate(lighten($bg-color, 15%), 10%)
+    border 0
+
+  .suggestion
+    //background-color: $bg-color;
+    a
+      color desaturate(lighten($bg-color, 70%), 70%)
+    &.focused
+      text-color desaturate(lighten($purple, 10%), 10%)
+      background-color $bg-color
+      a
+        color: $purple;
+
+.algolia-search-wrapper
+.algolia-autocomplete
+  .ds-dropdown-menu
+    border: 0
+    background-color desaturate(lighten($bg-color, 15%), 10%)
+
+    &:before
+      background-color desaturate(lighten($bg-color, 15%), 10%)
+      border: 0;
+
+@media (min-width: $MQMobile)
+  .dropdown-wrapper
+    .nav-dropdown
+      background-color desaturate(lighten($bg-color, 15%), 10%)
+      border 0
+      .dropdown-item
+        h4
+          border-top-color desaturate(lighten($bg-color, 30%), 30%);
+
+.sw-update-popup
+  background-color desaturate(lighten($bg-color, 15%), 10%)
+  border 0
+
+.navbar
+  position: fixed;
+  border-bottom-color desaturate(lighten($purple, 10%), 10%)
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $navbarHeight;
+  box-sizing: border-box;
+  border-bottom: 1px solid $purple;
+  background-color $bg-color
+  .site-name
+    color desaturate(lighten($purple, 10%), 10%)
+
+  .links
+    background-color $bg-color
+    border-bottom-color: $purple
+    a
+      &:hover
+      &:active
+      &:active
+      &:focus
+        border-bottom-color: $purple
+    border-bottom-color: $purple
+
+
+.sidebar-mask
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+
+.page-edit
+  .edit-link
+    a
+      color desaturate(lighten($bg-color, 50%), 50%)
+
+      &:hover,
+      &:focus
+        color #fff
+  .last-updated
+    .prefix
+      color desaturate(lighten($bg-color, 50%), 50%)
+
+    .time
+      color desaturate(lighten($bg-color, 40%), 50%)
+
+h2
+  border-bottom-color desaturate(lighten($bg-color, 10%), 10%)
+
+hr
+  border-top-color desaturate(lighten($bg-color, 10%), 10%)
+
+.page-nav
+  .inner
+    color desaturate(lighten($bg-color, 50%), 50%)
+    border-top-color desaturate(lighten($bg-color, 10%), 10%)
+
+.sidebar
+  a.sidebar-link
+    color desaturate(lighten($bg-color, 80%), 50%)
+    &:hover,
+    &:focus,
+    &.active
+      color $purple
+  .nav-links
+    border-bottom-color desaturate(lighten($purple, 10%), 10%)
+    border-right-color desaturate(lighten($purple, 10%), 10%)
+  //font-size: 15px;
+  background-color $bg-color
+  width: $sidebarWidth;
+  position: fixed;
+  z-index: 10;
+  margin: 0;
+  top: $navbarHeight;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  border-right: 1px solid $purple;
+  overflow-y: auto;
+  .sidebar-heading
+    color desaturate(lighten($bg-color, 80%), 50%)
+    &.open,
+    &:hover
+      color desaturate(lighten($purple, 10%), 10%)
+  a
+    &:hover,
+    &:focus,
+    &.active
+      border-left-color desaturate(lighten($purple, 10%), 10%)
+
+.nav-links
+  a
+    color desaturate(lighten($bg-color, 80%), 50%)
+
+    &:hover,
+    &:focus,
+    &.router-link-active
+      color #fff
+
+.nav-item a:not(.external).router-link-active
+  border-bottom-color $purple
+
+.home
+  .hero
+    .description
+      color desaturate(lighten($bg-color, 50%), 50%)
+    .action-button
+      border 0
+  .features,
+  .footer
+    border-top-color desaturate(lighten($bg-color, 10%), 10%)
+  .feature
+    h2
+      color desaturate(lighten($bg-color, 70%), 40%)
+    p
+      color desaturate(lighten($bg-color, 50%), 50%)
+  .footer
+    color desaturate(lighten($bg-color, 50%), 50%)
+
+blockquote
+  font-size: 1.2rem;
+  color: #999;
+  border-left: 0.25rem solid #dfe2e5;
+  margin-left: 0;
+  padding-left: 1rem;
+
+table
+  border-collapse: collapse;
+  margin: 1rem 0;
+  display: block;
+  overflow-x: auto;
+
+tr
+  border-top: 1px solid #dfe2e5;
+  &:nth-child(2n)
+    background-color: #2a2a2a;
+
+th, td
+  border: 1px solid #dfe2e5;
+  padding: 0.6em 1em;
+  border-color: hsla(0, 0%, 100%, .1);
+
+a
+  font-weight: 500;
+  color: $accentColor;
+  text-decoration: none;
+
+p a code
+  font-weight: 400;
+  color: $blueAccentColor;
+
+kbd
+  background: #eee;
+  border: solid 0.15rem #ddd;
+  border-bottom: solid 0.25rem #ddd;
+  border-radius: 0.15rem;
+  padding: 0 0.15em;
+
+ul ol
+  padding-left: 1.2em
+
+strong
+  font-weight: 600
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 600;
+  line-height: 1.25;
+
+  .content:not(.custom) > &
+    margin-bottom: 0;
+
+    &:first-child
+      margin-top: -1.5rem;
+      margin-bottom: 1rem;
+
+      + p,
+      + pre,
+      + .custom-block
+        margin-top: 2rem;
+
+  &:hover .header-anchor
+    opacity: 1;
+
+h1
+  font-size: 2.2rem;
+
+h2
+  font-size: 1.65rem;
+
+h3
+  font-size: 1.35rem;
+
+a.header-anchor
+  font-size: 0.85em;
+  float: left;
+  margin-left: -0.87em;
+  padding-right: 0.23em;
+  margin-top: 0.125em;
+  opacity: 0;
+  &:hover
+    text-decoration: none;
+
+code, kbd, .line-number
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+
+p, ul, ol
+  line-height: 1.7
+
+hr
+  border: 0
+
+.home .hero .action-button
+  background-color: $purple
+  &:hover
+    background-color: magenta

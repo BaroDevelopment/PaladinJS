@@ -1,0 +1,15 @@
+image: node:10.13.0
+
+pages:
+  cache:
+    paths:
+    - node_modules
+  stage: deploy
+  script:
+  - yarn install
+  - yarn docs:build
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
