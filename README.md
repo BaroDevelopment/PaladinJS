@@ -23,3 +23,12 @@ This page only gives very basic information, for the detailed information about 
 - [Documentation](https://paladin.netlify.com/)
 
 <img align="center" src="https://discordapp.com/api/guilds/393207704211947521/widget.png?style=banner2"/>
+
+## Donations
+Paladin is totally free and everyone can use it without restrictions.
+Since I have to pay the host for it and also invest a lot of time in the development I would appreciate every single donation. 
+You can donate form [here](https://donatebot.io/checkout/393207704211947521) using PayPal.
+
+<a href="https://donatebot.io/checkout/393207704211947521" target="_blank">
+    <img width="180" src="https://cdn.discordapp.com/attachments/396964573007052800/549002404922916864/paypal.png"" alt="Donate via PayPal">
+</a>
