@@ -13,18 +13,6 @@
             <!--<iframe src="https://discordapp.com/widget?id=393207704211947521&theme=dark" width="290" height="500" allowtransparency="true" frameborder="0"></iframe>-->
         <!--</div>-->
         <!---->
-        <p style="text-align: center;">
-            <img alt="Loading.gif" class="ipsImage" data-munge-src="https://cdn.discordapp.com/attachments/396964573007052800/502475962877739033/Loading.gif" height="3" src="https://www.paladinbot.online/index.php?app=core&amp;module=system&amp;controller=redirect&amp;url=https://cdn.discordapp.com/attachments/396964573007052800/502475962877739033/Loading.gif&amp;key=a3851a70c3f7c8dca82647461dd49a0c0aff25a1d9f8700513c0aa144fe8e39c&amp;resource=1" width="600">
-        </p>
-
-        <p style="text-align: center;">
-            &nbsp;<img alt="PaladinMainAvatar.png" class="ipsImage" data-munge-src="https://cdn.discordapp.com/attachments/396964573007052800/492135654919241739/PaladinMainAvatar.png" height="192" src="https://www.paladinbot.online/index.php?app=core&amp;module=system&amp;controller=redirect&amp;url=https://cdn.discordapp.com/attachments/396964573007052800/492135654919241739/PaladinMainAvatar.png&amp;key=8e42b9b6b2b06ab0d5d5bb9900d0192b8f0e715ee00f8deae2661206393b95ec&amp;resource=1" width="192">
-        </p>
-
-        <p style="text-align: center;">
-            <img alt="Loading.gif" class="ipsImage" data-munge-src="https://cdn.discordapp.com/attachments/396964573007052800/502475962877739033/Loading.gif" height="3" src="https://www.paladinbot.online/index.php?app=core&amp;module=system&amp;controller=redirect&amp;url=https://cdn.discordapp.com/attachments/396964573007052800/502475962877739033/Loading.gif&amp;key=a3851a70c3f7c8dca82647461dd49a0c0aff25a1d9f8700513c0aa144fe8e39c&amp;resource=1" width="600">
-        </p>
-
     </div>
 </template>
 
