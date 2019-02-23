@@ -1,17 +1,20 @@
 ## Welcome to the Offical Paladin Documentation
 
-::: warning
-Please keep in mind that you won't be able to do here any configuration. 
-This is just the documentation for all Paladin commands.
-:::
-
 ::: tip
-If you can not find anything here then please join the
- Offical discord server and request help there!
+Please keep in mind that you won't be able to do here any configuration. 
+This is the documentation for Paladin Bot and  is currently very incomplete and a work in progress. 
+If you don't find the information you're looking for, we recommend you to join the support server.
 :::
 
-## Paladin Command Categories 
-<br/>
+<DiscordInvite/>
+
+
+## Donating
+Paladin is a premium Discord Bot. You can donate form [here](https://donatebot.io/checkout/393207704211947521) using PayPal.
+
+### Paladin Command Categories 
+
+---
 
 >[Information Command](./information/README.md)
 
@@ -21,8 +24,10 @@ If you can not find anything here then please join the
 
 >[Bot Owner Command](./owner/README.md)
 
+---
+
 <br/>
-<DiscordInvite/>
+
 <br/>
 <DiscordWidget/>
 <CustomLayout/>

@@ -34,6 +34,4 @@ If you need more information about a specific command then simply type:
 ![Avatar Usage Preview](https://cdn.discordapp.com/attachments/468897350807453706/546461420393332736/unknown.png)
 ![Avatar Usage Preview](https://cdn.discordapp.com/attachments/468897350807453706/546461900775358471/unknown.png)
 
----
-
 <CustomLayout/>

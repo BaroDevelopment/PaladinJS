@@ -23,5 +23,5 @@ Get an overview about the shards
 ### Previev
 
 ![Avatar Usage Preview](https://cdn.discordapp.com/attachments/469576672128139275/547051031146659850/unknown.png)
-<CustomLayout/>
 
+<CustomLayout/>
