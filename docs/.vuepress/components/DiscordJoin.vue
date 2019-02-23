@@ -66,7 +66,6 @@
         align-items: center;
         background-color: #7289da;
         color: #fff;
-        display: -webkit-inline-box;
         display: -ms-inline-flexbox;
         display: inline-flex;
         justify-content: center;
@@ -154,10 +153,4 @@
     .weightNormal-WI4TcG {
          font-weight: 400;
      }
-
-    a, abbr, acronym, address, applet, big, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, ul, var {
-        font-family: inherit;
-        font-style: inherit;
-        font-weight: inherit;
-    }
 </style>
