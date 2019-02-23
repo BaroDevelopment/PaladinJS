@@ -7,12 +7,11 @@
 			<a href="https://discordbots.org/bot/441762003992838155" rel="external nofollow"><img alt="Paladin" data-munge-src="https://discordbots.org/api/widget/lib/441762003992838155.svg" src="https://www.paladinbot.online/index.php?app=core&amp;module=system&amp;controller=redirect&amp;url=https://discordbots.org/api/widget/lib/441762003992838155.svg&amp;key=aed62c7d197e283174cd22ffd5752af2ddb2889f14fa0b8bed950adc98fdd7e7&amp;resource=1"></a>
 			<a href="https://discordbots.org/bot/441762003992838155" rel="external nofollow"><img alt="Paladin" data-munge-src="https://discordbots.org/api/widget/owner/441762003992838155.svg" src="https://www.paladinbot.online/index.php?app=core&amp;module=system&amp;controller=redirect&amp;url=https://discordbots.org/api/widget/owner/441762003992838155.svg&amp;key=7b9bb59350bbf5863472096a873110a8d1183591080cfb341e9b0c19d9fe6d3f&amp;resource=1"></a>
 		</p>
-        <!---->
-        <!--<h3 style="text-align: center;">Offical Server</h3>-->
-        <!--<div style="text-align: center;">-->
-            <!--<iframe src="https://discordapp.com/widget?id=393207704211947521&theme=dark" width="290" height="500" allowtransparency="true" frameborder="0"></iframe>-->
-        <!--</div>-->
-        <!---->
+		<h3 style="text-align: center;">Offical Server</h3>
+		<div style="text-align: center;">
+			<iframe src="https://discordapp.com/widget?id=393207704211947521&theme=dark" width="290" height="500" allowtransparency="true" frameborder="0"></iframe>
+		</div>
+
     </div>
 </template>
 
