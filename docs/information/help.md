@@ -5,25 +5,20 @@
 ### Bot Permissions needed
 `none`
 
----
 ### Alias:
 > <Badge text="none" type="error" vertical="middle"/>
 
----
 ### Parameters
 `command-name` - The command to get more informations from
 
----
 ### Cooldown
 `5 seconds`
 
----
 ### Usage
 `-help`
 
 `-help [command name]`
 
----
 ::: tip Hint
 Type `-help` to get ALL available commands.
 If you need more information about a specific command then simply type:

@@ -12,23 +12,18 @@ This command is only executable in NSFW flagged channels!
 ### Bot Permissions needed
 `none`
 
----
 ### Alias:
 > <Badge text="none" type="error" vertical="middle"/>
 
----
 ### Parameters
 `search-term` - Your query string
 
----
 ### Cooldown
 `10 seconds`
 
----
 ### Usage
 `-urban [search-term]`
 
----
 ::: tip Hint
 This command will only work in `nsfw` flagged channels
 :::

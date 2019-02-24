@@ -32,9 +32,7 @@ This is a Discord restriction!
 ```
 
 >Example
----
----
----
+
 purge from last 40 messages (including pinned ones) where 
 the author is a bot, and the message is not older than 30 min 
 
@@ -46,10 +44,6 @@ the author is a bot, and the message is not older than 30 min
 `-purge -n 100 -b -p -t 30` 
 
 `-purge --amount=100 --bots --pinned --time=30` 
-
----
----
----
 
 Purge only messages from Stalista#7777
 

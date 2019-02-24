@@ -1,4 +1,4 @@
-# Owner Commands
+## Owner Commands
 
 Here is an overview about all available information commands
 

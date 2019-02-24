@@ -6,19 +6,15 @@ Execute commands using SSH. Mainly used to execute script like start, restart an
 ### Bot Permissions needed
 `none`
 
----
 ### Alias:
 >`none`
 
----
 ### Parameters
 `[JAVASCRIPT]` - Your Javascript Code to execute
 
----
 ### Cooldown
 `1 seconds`
 
----
 ### Usage
 `-ssh [command]` - Command to execute in host's terminal
 
@@ -38,7 +34,6 @@ Execute commands using SSH. Mainly used to execute script like start, restart an
 -ssh sh restart.sh && cd PaladinJS && sh update.sh  => restart Paladin and update PaladinJS
 ```
 
----
 ::: danger Definition of Update
 Git pull and start bot
 :::
@@ -68,8 +63,6 @@ cd /root/Paladin/ && tmux kill-session -t Paladin && tmux new -d -s Paladin 'cd 
 ```
 
 For more informations about Tmux click [HERE](https://gist.github.com/MohamedAlaa/2961058) 
-
----
 
 ## Handling Script with PM2 (PaladinJS)
 > PaladinJS start script

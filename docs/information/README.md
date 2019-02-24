@@ -1,4 +1,4 @@
-# Information Commands
+## Information Commands
 
 Here is an overview about all available information commands
 

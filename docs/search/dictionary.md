@@ -6,20 +6,16 @@ A oxford dictionary lookup to get the definition of a word
 ### Bot Permissions needed
 `none`
 
----
 ### Alias:
 > <Badge text="define" type="error" vertical="middle"/>
 > <Badge text="dic" type="tip" vertical="middle"/>
 
----
 ### Parameters
 `search-term` - Your query string
 
----
 ### Cooldown
 `10 seconds`
 
----
 ### Usage
 `-define [search-term]`
 

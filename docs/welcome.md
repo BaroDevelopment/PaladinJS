@@ -1,4 +1,9 @@
-## Welcome to the Offical Paladin Documentation
+---
+layout: <Layout/>
+---
+
+## Welcome 
+Welcome to the official Paladin Documentation
 
 ::: tip
 Please keep in mind that you won't be able to do here any configuration. 
@@ -20,9 +25,7 @@ You can donate form [here](https://donatebot.io/checkout/393207704211947521) usi
   </a>
 </p>
 
-### Paladin Command Categories 
-
----
+## Paladin Command Categories
 
 >[Information Command](./information/README.md)
 
@@ -32,14 +35,11 @@ You can donate form [here](https://donatebot.io/checkout/393207704211947521) usi
 
 >[Bot Owner Command](./owner/README.md)
 
----
-
 <br/>
 
 <br/>
 <DiscordWidget/>
 <CustomLayout/>
-
 
 
 

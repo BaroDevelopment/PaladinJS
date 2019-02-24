@@ -1,4 +1,4 @@
-# Moderation Commands
+## Moderation Commands
 
 Here is an overview about all available moderation commands
 

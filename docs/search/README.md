@@ -1,4 +1,4 @@
-# Search Commands
+## Search Commands
 
 Here is an overview about all kind of search commands
 

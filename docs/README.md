@@ -5,6 +5,7 @@ heroImage: https://cdn.discordapp.com/attachments/396964573007052800/49213565491
 tagline: Upgrade your Discord Server today!
 actionText: Get Started →
 actionLink: /welcome
+lang: en-US
 features:
 - title: Music Bot
   details: Enjoy good quality music with your friends and control Paladin with reactions.
