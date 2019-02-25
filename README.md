@@ -40,3 +40,14 @@ You can donate form [here](https://donatebot.io/checkout/393207704211947521) usi
 <a href="https://donatebot.io/checkout/393207704211947521" target="_blank">
     <img width="180" src="https://cdn.discordapp.com/attachments/396964573007052800/549002404922916864/paypal.png"" alt="Donate via PayPal">
 </a>
+
+## Paladin uses
+<a href="https://vuepress.vuejs.org/">
+<img src="https://cdn.discordapp.com/attachments/396964573007052800/549490451699466251/vuepress.png" alt="VuePress"             height="100" />
+</a> 
+<a href="https://discord.js.org/#/">
+<img src="https://cdn.discordapp.com/attachments/396964573007052800/549491157999026177/logo-square.png" alt="DiscordJS" height="100" />
+</a>
+<a href="https://nodejs.org/en/">
+<img src="https://cdn.discordapp.com/attachments/396964573007052800/549491684740694019/node.png" alt="Node.js" height="100" />
+</a>
