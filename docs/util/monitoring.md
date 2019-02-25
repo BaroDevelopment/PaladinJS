@@ -1,5 +1,5 @@
 ## Netdata
-
+![Netdata](https://cdn.discordapp.com/attachments/396964573007052800/549687338352115715/netdata.gif)
 ### Installation (Linux)
 ```sh
 bash <(curl -Ss https://my-netdata.io/kickstart.sh)
@@ -156,5 +156,5 @@ cd /usr/src/netdata.git./netdata-uninstaller.sh --force
 ## Other tools
 
 - [Grafana](https://grafana.com/)
-- []
+
 <CustomLayout/>

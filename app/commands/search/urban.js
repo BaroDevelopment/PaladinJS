@@ -44,14 +44,15 @@ module.exports = {
 		embed.setColor('#FF00FF')
 			.setTitle(urbanObject.word)
 			.setURL(urbanObject.permalink)
-			.addField('Definition', trim(urbanObject.definition, 1024))
-			.addField('Example', trim(urbanObject.example, 1024))
-			.addField('\uD83D\uDC4D', urbanObject.thumbs_up, true)
+			.addField('Definition', trim(urbanObject.definition, 1024));
+		if (urbanObject.exmaple)
+			embed.addField('Example', trim(urbanObject.example, 1024));
+		embed.addField('\uD83D\uDC4D', urbanObject.thumbs_up, true)
 			.addField('\uD83D\uDC4E ', urbanObject.thumbs_down, true);
 		if (urbanObject.sound_urls.length > 0) {
 			embed.addField('Sound files', urbanObject.sound_urls.map((file, index) => `[sound ${index + 1}](${file})`));
 			const attachment = new MessageAttachment(urbanObject.sound_urls[0]);
-			return message.channel.send({embed, files: [attachment]});
+			return message.channel.send({ embed, files: [attachment] });
 		}
 		message.channel.send(embed);
 	},
