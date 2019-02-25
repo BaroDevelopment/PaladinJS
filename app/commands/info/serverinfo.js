@@ -52,7 +52,7 @@ module.exports = {
 		{ name: 'msg', type: String, multiple: true, alias: 'm', defaultOption: true },
 		{ name: 'delete', type: Boolean, alias: 'd' },
 	],
-	execute(message, args) {
+	execute(message, args) { //TODO: Search across all shards
 		const embed = new MessageEmbed().setColor('#FF00FF');
 
 		if (!message.guild && !args.msg)
@@ -62,8 +62,8 @@ module.exports = {
 		if (!target)
 			return message.channel.send('No server found!');
 
-		const textChannelCount = target.channels.filter(c => c.type == 'text').size;
-		const voiceChannelCount = target.channels.filter(c => c.type == 'voice').size;
+		const textChannelCount = target.channels.filter(c => c.type === 'text').size;
+		const voiceChannelCount = target.channels.filter(c => c.type === 'voice').size;
 
 		const afkChannel = target.afkChannel ? target.afkChannel.name : emote.disabled.mention;
 

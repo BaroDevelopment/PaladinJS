@@ -13,7 +13,7 @@ module.exports = {
 		{
 			title: 'Monitoring',
 			collapsable: true,
-			children: ['/util/netdata'],
+			children: ['/util/monitoring'],
 		},
 		{
 			title: 'Markdown',
@@ -38,6 +38,9 @@ module.exports = {
 			children: [
 				'/owner/eval',
 				'/owner/ssh',
+				'/owner/setAvatar',
+				'/owner/setActivity',
+				'/owner/leaveServer',
 			],
 		},
 		{

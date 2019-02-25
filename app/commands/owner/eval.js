@@ -24,13 +24,12 @@ module.exports = {
 		`\`${gPrefix}eval Math.pow(5, 8)\``,
 		`\`${gPrefix}eval 5 + 6\``,
 		`\`${gPrefix}eval message.client.guilds.map(g=>g.name).join('\\n')\``,
-		`\`${gPrefix}eval message.client.shard.broadcastEval(\'if(this.guilds.get(\\'285532310466461697\\'))this.guilds.get(\\'285532310466461697\\').leave()\')\``,
 	],
 	arguments: [
 		{ name: 'code', type: String, multiple: true, alias: 'c', defaultOption: true },
 		{ name: 'delete', type: Boolean, alias: 'd' },
 	],
-	async execute(message, args) { //TODO: for all shards
+	execute(message, args) { //TODO: for all shards
 
 		const code = args.code.join(' ');
 		let evaled = eval(code);

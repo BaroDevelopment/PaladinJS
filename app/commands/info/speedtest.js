@@ -9,7 +9,7 @@ module.exports = {
 	category: 'info',
 	guildOnly: false,
 	documentationURL: 'https://paladin.netlify.com/information/speedtest.html',
-	usage: [`${gPrefix}ping`],
+	usage: [`${gPrefix}speedtest`],
 	cooldown: 60,
 	aliases: ['stest'],
 	arguments: [
@@ -27,8 +27,8 @@ module.exports = {
 		const test = speedTest({ maxTime: 5000 });
 
 		test.on('data', data => {
-			const download = data['speeds']['download'].toFixed(2) + ' MBit/s';
-			const upload = data['speeds']['upload'].toFixed(2) + ' MBit/s';
+			const download = data['speeds']['download'].toFixed(0) + ' MBit/s';
+			const upload = data['speeds']['upload'].toFixed(0) + ' MBit/s';
 			const host = `${data['server']['host']}`;
 			const serverPing = `${ data['server']['ping']} ms`;
 			const embed = new Discord.MessageEmbed().setColor('#FF00FF')

@@ -14,7 +14,7 @@ module.exports = {
 		repo: 'SenaxDev/PaladinJS',
 		docsDir: 'docs/',
 		editLinks: true,
-		sidebarDepth: 3,
+		sidebarDepth: 2,
 		lastUpdated: true,
 		displayAllHeaders: true,
 		nav: [
