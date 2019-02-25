@@ -1,5 +1,6 @@
 const { MessageEmbed, Util } = require('discord.js');
 const { gPrefix } = require('../../config.json');
+const {formatDate} = require('../util/paladinUtils.js')
 
 module.exports = {
 	name: 'EmojiInfo',
@@ -18,7 +19,7 @@ module.exports = {
 	],
 	execute(message, args) {
 		const embed = new MessageEmbed().setColor('#FF00FF');
-		let emoji = message.guild.emojis.find(emoji => emoji.name === args.join(' '));
+		let emoji = message.guild.emojis.find(emoji => emoji.name === args.msg.join(' '));
 
 		if (!emoji) {
 			emoji = Util.parseEmoji(args.msg.join(' '));

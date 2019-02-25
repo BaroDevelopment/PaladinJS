@@ -18,7 +18,7 @@ module.exports = {
 	params: ['\`[#channel]\` - The channel as mention', '\`[channel-id]\` - id of channel', '\`[channel-name]\` - name of channel'],
 	cooldown: 5,
 	arguments: [
-		{ name: 'msg', type: String, multiple: true, alias: 'msg', defaultOption: true },
+		{ name: 'msg', type: String, multiple: true, alias: 'm', defaultOption: true },
 		{ name: 'delete', type: Boolean, alias: 'd' },
 	],
 	execute(message, args) {

@@ -7,7 +7,7 @@ module.exports = {
 		if (message.mentions.users.size > 0)
 			return target = message.guild.members.get(message.mentions.users.first().id);
 
-		if (args.length > 0) {
+		if (args) {
 			target = message.guild.members.find(m => m.user.username === args.join(' '));
 			if (!target)
 				target = message.guild.members.find(m => m.user.id === args.join(' '));
@@ -18,7 +18,7 @@ module.exports = {
 	getUser(message, args) {
 		if (message.mentions.users.size > 0)
 			return target = message.mentions.users.first();
-		if (args.length > 0) {
+		if (args) {
 			target = message.client.users.find(u => u && u.username === args.join(' '));
 			if (!target)
 				target = message.client.users.find(u => u && u.id === args.join(' '));
@@ -29,7 +29,7 @@ module.exports = {
 	getRole(message, args) {
 		if (message.mentions.roles.size > 0)
 			return target = message.mentions.roles.first();
-		if (args.length > 0) {
+		if (args) {
 			target = message.guild.roles.find(r => r && r.name === args.join(' '));
 			if (!target)
 				target = message.guild.roles.find(r => r && r.id === args.join(' '));
@@ -39,7 +39,7 @@ module.exports = {
 	getChannel(message, args) {
 		if (message.mentions.channels.size > 0)
 			return target = message.mentions.channels.first();
-		if (args.length > 0) {
+		if (args) {
 			target = message.guild.channels.find(c => c && c.name === args.join(' '));
 			if (!target)
 				target = message.guild.channels.find(c => c && c.id === args.join(' '));

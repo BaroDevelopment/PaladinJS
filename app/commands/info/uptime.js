@@ -9,6 +9,7 @@ module.exports = {
 	documentationURL: 'https://paladin.netlify.com/information/uptime.html',
 	usage: [`${gPrefix}uptime`],
 	cooldown: 60,
+	aliases: ['utime'],
 	arguments: [
 		{ name: 'delete', type: Boolean, alias: 'd' },
 	],

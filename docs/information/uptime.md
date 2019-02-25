@@ -9,6 +9,9 @@ Displays the time the bot has been up.
 ### Parameters
 `none`
 
+### Alias:
+> <Badge text="utime" type="error" vertical="middle"/>
+
 ### Cooldown
 `60 seconds`
 

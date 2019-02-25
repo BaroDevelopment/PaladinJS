@@ -10,6 +10,9 @@ Used to test the speed of the Bot/Host
 ### Parameters
 `none`
 
+### Alias:
+> <Badge text="stest" type="error" vertical="middle"/>
+
 ### Cooldown
 `60 seconds`
 

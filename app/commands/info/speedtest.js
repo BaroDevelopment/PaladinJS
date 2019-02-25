@@ -11,6 +11,7 @@ module.exports = {
 	documentationURL: 'https://paladin.netlify.com/information/speedtest.html',
 	usage: [`${gPrefix}ping`],
 	cooldown: 60,
+	aliases: ['stest'],
 	arguments: [
 		{ name: 'delete', type: Boolean, alias: 'd' },
 	],

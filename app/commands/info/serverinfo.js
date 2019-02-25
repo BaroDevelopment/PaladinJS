@@ -165,7 +165,7 @@ function getRegionIcon(message, region) {
 }
 
 function getServer(message, args) {
-	if (args.length > 0) {
+	if (args) {
 		target = message.client.guilds.find(g => g.id === args.join(' '));
 		if (!target)
 			target = message.client.guilds.find(g => g.name === args.join(' '));
