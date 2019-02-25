@@ -1,6 +1,6 @@
 ## Overview
 
->[Deploy your vuepress Docs](./deploy.md)
+>[Deploy your vuepress Docs](vuepress.md)
 
 >[How to use Markdown](./markdown.md)
 

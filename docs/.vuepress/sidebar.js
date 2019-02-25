@@ -6,9 +6,14 @@ module.exports = {
 			children: ['/'],
 		},
 		{
-			title: 'Docs Deployment',
+			title: 'Vuepress',
 			collapsable: true,
-			children: ['/util/deploy'],
+			children: ['/util/vuepress'],
+		},
+		{
+			title: 'Monitoring',
+			collapsable: true,
+			children: ['/util/netdata'],
 		},
 		{
 			title: 'Markdown',

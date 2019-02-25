@@ -43,8 +43,8 @@ module.exports = {
 			.addField('Status', emote[target.presence.status], true)
 			.addField('In Voice', inVoice, true)
 			.addField('Account-Type', isBot, true)
-			.addField('Joined', formatDate(target.user.createdAt), true)
-			.addField('Registered', formatDate(target.joinedAt), true)
+			.addField('Registered', formatDate(target.user.createdAt), true)
+			.addField('Joined', formatDate(target.joinedAt), true)
 			.addField('Key Permissions', '```prolog\n' + target.permissions.toArray().map(p => p).join('\n') + '```')
 			// .addField('Game', game, true)
 			.addField('Roles', target.roles.map(r => r.toString()).join('\n'), true);
