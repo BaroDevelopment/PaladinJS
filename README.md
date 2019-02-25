@@ -54,3 +54,7 @@ You can donate form [here](https://donatebot.io/checkout/393207704211947521) usi
 <a href="https://www.postgresql.org/">
 <img src="https://cdn.discordapp.com/attachments/396964573007052800/549494368717897728/postgres.png" alt="Postgres SQL" height="100" />
 </a>
+
+## Netdata for monitoring
+<a href="http://81.169.230.19:19999/#menu_system;theme=slate">
+<img src="https://cdn.discordapp.com/attachments/396964573007052800/549687338352115715/netdata.gif" alt="Netdata"/></a>
