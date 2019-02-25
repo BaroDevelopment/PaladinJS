@@ -58,4 +58,3 @@ You can donate form [here](https://donatebot.io/checkout/393207704211947521) usi
 ## Netdata for monitoring
 <a href="http://81.169.230.19:19999/#menu_system;theme=slate">
 <img src="https://cdn.discordapp.com/attachments/396964573007052800/549687338352115715/netdata.gif" alt="Netdata"/></a>
-<img src="https://cdn.discordapp.com/attachments/396964573007052800/547342790904774671/Loading.gif" width="1000"/>
