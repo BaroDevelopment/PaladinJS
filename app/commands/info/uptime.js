@@ -9,7 +9,10 @@ module.exports = {
 	documentationURL: 'https://paladin.netlify.com/information/uptime.html',
 	usage: [`${gPrefix}uptime`],
 	cooldown: 60,
-	execute(message) {
+	arguments: [
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
+	execute(message, args) {
 		const embed = new Discord.MessageEmbed().setColor('#FF00FF')
 		embed.setDescription('I\'ve been online for\n' + this.getUptime(message))
 		message.channel.send(embed);

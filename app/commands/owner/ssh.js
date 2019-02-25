@@ -1,4 +1,4 @@
-const {MessageEmbed} = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const { host } = require('../../config.json');
 const { gPrefix } = require('../../config.json');
 var SSH = require('simple-ssh');
@@ -9,6 +9,7 @@ module.exports = {
 	usage: [`\`${gPrefix}ssh [command line commands]\``],
 	cooldown: 1,
 	guildOnly: false,
+	args: true,
 	params: ['`[command]` - Command to execute in host\'s terminal'],
 	category: 'owner',
 	userPermissions: ['BOT_OWNER'],
@@ -26,6 +27,10 @@ module.exports = {
 		`\`${gPrefix}ssh cd PaladinJS && sh stop.sh\``,
 		`\`${gPrefix}ssh sh restart.sh && cd PaladinJS && sh update.sh\``,
 	],
+	arguments: [
+		{ name: 'command', type: String, multiple: true, alias: 'c', defaultOption: true },
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
 	execute(message, args) {
 
 		var ssh = new SSH({
@@ -39,20 +44,16 @@ module.exports = {
 			message.channel.send(err);
 			ssh.end();
 		});
-		ssh.on('ready', function (ready){
+		ssh.on('ready', function(ready) {
 			const embed = new MessageEmbed().setColor('#04ff00');
-			embed.setDescription('Successfully Connected')
-			message.channel.send(embed)
+			embed.setDescription('Successfully Connected');
+			message.channel.send(embed);
 		});
 
-		const toExecute = args.join(' ');
-		// let limit = 0;
-		ssh.exec(toExecute, {
+		ssh.exec(args.command.join(' '), {
 			out: function(stdout) {
-				message.channel.send(stdout);
-				console.log(stdout);
+				console.log(stdout)
 			},
-			// },
 		}).start();
 	},
 };

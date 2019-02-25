@@ -16,10 +16,14 @@ module.exports = {
 	examples: [`\`${gPrefix}userinfo @YINGYANG#7777\``],
 	params: ['\`[@user]\` - The user as mention', '\`[user-id]\` - id of user', '\`[user-name]\` - name of user'],
 	cooldown: 5,
+	arguments: [
+		{ name: 'msg', type: String, multiple: true, alias: 'm', defaultOption: true },
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
 	execute(message, args) {
 
 		const embed = new Discord.MessageEmbed().setColor('#FF00FF');
-		const target = getMember(message, args);
+		const target = getMember(message, args.msg);
 		if (!target)
 			return message.channel.send('No user found!');
 

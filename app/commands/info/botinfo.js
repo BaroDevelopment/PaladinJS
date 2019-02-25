@@ -16,6 +16,9 @@ module.exports = {
 	aliases: ['paladin', 'stats', 'binfo', 'info'],
 	usage: [`\`${gPrefix}botinfo\``],
 	cooldown: 60,
+	arguments: [
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
 	async execute(message, args) {
 
 		const guildCounts = await message.client.shard.fetchClientValues('guilds.size');

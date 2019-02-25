@@ -12,17 +12,21 @@ module.exports = {
 	aliases: ['einfo'],
 	params: ['\`[:emoji:]\` - The name emoji as mention', '\`[emoji name]\` - The name of the emoji', '\`[emoji id]\` - The id of the emoji'],
 	cooldown: 5,
+	arguments: [
+		{ name: 'msg', type: String, multiple: true, alias: 'm', defaultOption: true },
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
 	execute(message, args) {
 		const embed = new MessageEmbed().setColor('#FF00FF');
 		let emoji = message.guild.emojis.find(emoji => emoji.name === args.join(' '));
 
 		if (!emoji) {
-			emoji = Util.parseEmoji(args.join(' '));
+			emoji = Util.parseEmoji(args.msg.join(' '));
 			emoji = message.guild.emojis.find(e => e.id === emoji.id);
 		}
 
 		if (!emoji)
-			emoji = message.guild.emojis.find(e => e.id === args[0]);
+			emoji = message.guild.emojis.find(e => e.id === args.msg[0]);
 
 		if (!emoji)
 			return message.channel.send(embed.setDescription('Emoji not found'));

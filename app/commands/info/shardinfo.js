@@ -11,7 +11,10 @@ module.exports = {
 	usage: [`${gPrefix}shardinfo`],
 	aliases: ['shards', 'shard'],
 	cooldown: 60,
-	async execute(message) {
+	arguments: [
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
+	async execute(message, args) {
 		const embed = new Discord.MessageEmbed().setColor('#FF00FF')
 			.setAuthor(message.author.username, message.author.displayAvatarURL(), message.author.displayAvatarURL());
 		const shardArray = await message.client.shard.fetchClientValues('shard.client.guilds');

@@ -10,8 +10,12 @@ module.exports = {
 	aliases: ['lmgify'],
 	params: ['[`search term` - Your query string' ],
 	cooldown: 5,
+	arguments: [
+		{ name: 'query', type: String, multiple: true, alias: 'q', defaultOption: true },
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
 	execute(message, args) {
-		const url = 'https://lmgtfy.com/?q=' + args.join('+')
+		const url = 'https://lmgtfy.com/?q=' + args.query.join('+')
 		message.channel.send(url)
 	},
 };

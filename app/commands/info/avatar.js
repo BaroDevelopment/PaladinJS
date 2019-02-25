@@ -14,6 +14,10 @@ module.exports = {
 		'`[user-id]` - id of the user',
 		'`[user-name]` - the username',
 	],
+	arguments: [
+		{ name: 'msg', type: String, multiple: true, alias: 'm', defaultOption: true },
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
 	cooldown: 5,
 	execute(message, args) {
 		if (message.mentions.users.size > 1) {
@@ -27,7 +31,7 @@ module.exports = {
 			return;
 		}
 
-		const target = getUser(message, args);
+		const target = getUser(message, args.msg);
 
 		if (!target)
 			return message.channel.send('No user found!');

@@ -16,6 +16,10 @@ module.exports = {
 	examples: [`${gPrefix}urban [loli]`],
 	params: ['`[search-term]` - Your query string'],
 	cooldown: 10,
+	arguments: [
+		{ name: 'query', type: String, multiple: true, alias: 'q', defaultOption: true },
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
 	async execute(message, args) {
 
 		const embed = new MessageEmbed();
@@ -27,13 +31,13 @@ module.exports = {
 				.setImage(images.nsfw)
 				.setDescription(`**This server has ${nsfwChannels.size} NSFW channels**\n${nsfwChannels.map(c => c.toString()).join(',  ')}`));
 
-		const query = querystring.stringify({ term: args.join(' ') });
+		const query = querystring.stringify({ term: args.query.join(' ') });
 		const response = await fetch(`https://api.urbandictionary.com/v0/define?${query}`);
 		const jsonArray = await response.json().then(r => r['list']);
 		const urbanObject = jsonArray[0];
 
 		if (!jsonArray.length)
-			return message.channel.send(`No results found for **${args.join(' ')}**.`);
+			return message.channel.send(`No results found for **${args.query.join(' ')}**.`);
 
 		const trim = (str, max) => ((str.length > max) ? `${str.slice(0, max - 3)}...` : str);
 

@@ -15,6 +15,11 @@ module.exports = {
 			collapsable: true,
 			children: ['/util/markdown'],
 		},
+		{
+			title: 'Discord.js',
+			collapsable: true,
+			children: ['/util/discordjs'],
+		},
 	],
 	'/': [
 		{

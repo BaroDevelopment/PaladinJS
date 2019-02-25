@@ -11,7 +11,10 @@ module.exports = {
 	documentationURL: 'https://paladin.netlify.com/information/speedtest.html',
 	usage: [`${gPrefix}ping`],
 	cooldown: 60,
-	async execute(message) {
+	arguments: [
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
+	async execute(message, args) {
 		const start = new Date().getTime();
 		let duration = 0;
 		await message.react(emote.check.id);

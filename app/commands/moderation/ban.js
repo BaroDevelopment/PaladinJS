@@ -17,9 +17,13 @@ module.exports = {
 	examples: [`\`${gPrefix}ban @YINGYANG#7777 \``],
 	params: [`\`@user\` - the user to ban `, `\`user-id\` - the id of the user to ban`, `\`user-name\` - the name of the user to ban`],
 	cooldown: 5,
+	arguments: [
+		{ name: 'msg', type: String, multiple: true, alias: 'm', defaultOption: true },
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
 	async execute(message, args) {
 		const embed = new Discord.MessageEmbed().setColor('#FF00FF');
-		const target = getMember(message, args);
+		const target = getMember(message, args.msg);
 		if (!target)
 			return message.channel.send('No user found!');
 
@@ -38,9 +42,9 @@ module.exports = {
 
 		let reason;
 
-		if (message.mentions.users.size > 0 && args.length > 1) {
-			args.shift();
-			reason = args.join(' ');
+		if (message.mentions.users.size > 0 && args.msg.length > 1) {
+			args.msg.shift();
+			reason = args.msg.join(' ');
 		}
 
 		embed.setTitle('Server Member got banned')

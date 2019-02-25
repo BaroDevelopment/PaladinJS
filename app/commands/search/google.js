@@ -14,10 +14,13 @@ module.exports = {
 	examples: ['`-g malaka`'],
 	params: ['`[search-term]` - Your query string'],
 	cooldown: 5,
+	arguments: [
+		{ name: 'query', type: String, multiple: true, alias: 'q', defaultOption: true },
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
 	execute(message, args) {
 
-		const query = args.join(' ');
-		const url = `https://www.googleapis.com/customsearch/v1?q=${query}&cx=${google_search_engine_id}&key=${google_api_key}`;
+		const url = `https://www.googleapis.com/customsearch/v1?q=${args.query.join(' ')}&cx=${google_search_engine_id}&key=${google_api_key}`;
 
 		fetch(url, {
 			headers: {

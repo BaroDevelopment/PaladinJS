@@ -18,10 +18,14 @@ module.exports = {
 	examples: [`\`${gPrefix}roleinfo @Admin\``],
 	params: ['\`[@role]\` - The role as mention', '\`[role-id]\` - id of role', '\`[role-name]\` - name of role'],
 	cooldown: 5,
+	arguments: [
+		{ name: 'msg', type: String, multiple: true, alias: 'm', defaultOption: true },
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
 	execute(message, args) {
 
 		const embed = new MessageEmbed().setColor('#FF00FF');
-		const target = getRole(message, args);
+		const target = getRole(message, args.msg);
 
 		if (!target)
 			return message.channel.send('No role found!');

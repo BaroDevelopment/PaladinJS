@@ -1,4 +1,5 @@
 const fs = require('fs');
+const commandLineArgs = require('command-line-args');
 const consoleColor = require('colors');
 const Discord = require('discord.js');
 const config = require('./config.json');
@@ -99,21 +100,25 @@ client.on('message', async message => {
 
 		if (util.hasCoolDown(command, cooldowns, message, isBotOwner)) return;
 
+		const params = commandLineArgs(command.arguments, { argv: args, partial: true, stopAtFirstUnknown: false });
+
 		try {
 			if (message.guild) {
 				const enabled = await commandEnabled(message.guild.id, command.name);
 				if (!enabled)
 					return message.channel.send(`${command.name} Command is disabled in this server!`);
-				command.execute(message, args);
+				command.execute(message, params);
 				commandsExecuted++;
 			}
 			else // DM
-				command.execute(message, args);
+				command.execute(message, params);
 		} catch (error) {
 			console.error(error);
 			// message.react(message.client.emojis.get('458010105280069632'));
 			// message.reply('there was an error trying to execute that command!');
 		}
+		if (params.delete)
+			message.delete({timeout: 2000});
 	},
 );
 
@@ -126,7 +131,7 @@ function initPrefixes() {
 	const query = 'Select id, prefix from settings.guild';
 	client.databaseClient.query(query).then(res => {
 		res.rows.map(r => client.prefixes.set(r['id'], r['prefix']));
-	});
+	}).catch(console.error);
 }
 
 async function fixDatabase(id, name) {
@@ -136,7 +141,7 @@ async function fixDatabase(id, name) {
 		if (!res.rowCount) {
 			client.databaseClient.query(query, values).catch(e => console.log(e));
 		}
-	});
+	}).catch(console.error);
 	insertCommands(id);
 }
 
@@ -147,7 +152,7 @@ function insertCommands(id) {
 async function commandEnabled(id, name) {
 	const query = 'Select enabled from settings.commands where id=$1 and name = $2';
 	const values = [id, name.toLowerCase()];
-	const enabled = await client.databaseClient.query(query, values).catch(e => console.log(e));
+	const enabled = await client.databaseClient.query(query, values).catch(console.error);
 	try {
 		return enabled.rows[0]['enabled'];
 	} catch (e) {
@@ -159,7 +164,7 @@ async function commandEnabled(id, name) {
 function addCommandToDB(id, name) {
 	const query = `Insert into settings.commands values ($1,$2,$3,$4,$5)`;
 	const values = [id, name.toLowerCase(), config.commandsEnabled, [], []];
-	client.databaseClient.query(query, values).then().catch(e => console.log(e));
+	client.databaseClient.query(query, values).catch(e => e);
 }
 
 function loadCommands() {

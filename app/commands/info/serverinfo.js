@@ -48,13 +48,17 @@ module.exports = {
 	examples: [`\`${gPrefix}serverinfo Paladin Bot\``],
 	params: ['\`[server-id]\` - id of server', '\`[server-name]\` - name of server'],
 	cooldown: 5,
+	arguments: [
+		{ name: 'msg', type: String, multiple: true, alias: 'm', defaultOption: true },
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
 	execute(message, args) {
 		const embed = new MessageEmbed().setColor('#FF00FF');
 
-		if (!message.guild && args.length === 0)
+		if (!message.guild && !args.msg)
 			return message.channel.send('Please provide arguments');
 
-		const target = getServer(message, args);
+		const target = getServer(message, args.msg);
 		if (!target)
 			return message.channel.send('No server found!');
 

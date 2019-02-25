@@ -17,10 +17,14 @@ module.exports = {
 	examples: [`\`${gPrefix}channelinfo #general\``],
 	params: ['\`[#channel]\` - The channel as mention', '\`[channel-id]\` - id of channel', '\`[channel-name]\` - name of channel'],
 	cooldown: 5,
+	arguments: [
+		{ name: 'msg', type: String, multiple: true, alias: 'msg', defaultOption: true },
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
 	execute(message, args) {
 
 		const embed = new MessageEmbed().setColor('#FF00FF');
-		const target = getChannel(message, args);
+		const target = getChannel(message, args.msg);
 
 		if (!target)
 			return message.channel.send('No channel found!');

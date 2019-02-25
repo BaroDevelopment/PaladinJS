@@ -13,9 +13,13 @@ module.exports = {
 	examples: [`\`${gPrefix}afk sleeping ... leave me a DM\``],
 	params: ['\`[afk message]\` - The message to display if someone mentions you.'],
 	cooldown: 10,
+	arguments: [
+		{ name: 'msg', type: String, multiple: true, alias: 'm', defaultOption: true },
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
 	execute(message, args) {
 		const embed = new MessageEmbed().setColor('#FF00FF');
-		const afkMessage = args.length ? args.join(' ') : 'I am afk.';
+		const afkMessage = args.msg ? args.msg.join(' ') : 'I am afk.';
 		afkUsers.set(message.author.id, {
 			afkMessage: afkMessage,
 			displayAvatarUrl: message.author.displayAvatarURL(),

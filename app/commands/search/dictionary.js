@@ -15,16 +15,19 @@ module.exports = {
 	examples: [`${gPrefix}define ace`],
 	params: ['`[search-term]` - Your query string'],
 	cooldown: 10,
+	arguments: [
+		{ name: 'word', type: String, multiple: true, alias: 'c', defaultOption: true },
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
 	async execute(message, args) {
 
 		const embed = new MessageEmbed();
 
-
 		const app_id = '4f5d735f';
 		const app_key = 'e679f7ec77cc18a1949785656e4dc29c';
 		const lang = 'en';
-		const url = `https://od-api.oxforddictionaries.com:443/api/v1/entries/${lang}/${args.join(' ').toLowerCase()}`;
-		embed.setColor('#FF00FF').setDescription(`Definition for **${args.join(' ').toUpperCase()}**`);
+		const url = `https://od-api.oxforddictionaries.com:443/api/v1/entries/${lang}/${args.word.join(' ').toLowerCase()}`;
+		embed.setColor('#FF00FF').setDescription(`Definition for **${args.word.join(' ').toUpperCase()}**`);
 
 		let audioFile;
 

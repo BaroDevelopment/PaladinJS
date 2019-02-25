@@ -20,11 +20,14 @@ module.exports = {
 	args: false,
 	guildOnly: false,
 	documentationURL: 'https://paladin.netlify.com/information/help.html',
+	arguments: [
+		{ name: 'command', type: String, multiple: true, alias: 'c', defaultOption: true },
+		{ name: 'delete', type: Boolean, alias: 'd' },
+	],
 	execute(message, args) {
 		const { commands } = message.client;
 		const embed = new Discord.MessageEmbed().setColor('#FF00FF');
-
-		if (!args.length) {
+		if (!args.command) {
 			embed.setAuthor('HELP COMMAND', message.author.displayAvatarURL(), message.author.displayAvatarURL());
 
 			let infoValue = '```css\n';
@@ -86,7 +89,7 @@ module.exports = {
 		}
 
 
-		const name = args[0].toLowerCase();
+		const name = args.command[0].toLowerCase();
 		const command = commands.get(name) || commands.find(c => c.aliases && c.aliases.includes(name));
 
 		if (!command) {
