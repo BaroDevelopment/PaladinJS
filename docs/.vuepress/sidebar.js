@@ -41,6 +41,8 @@ module.exports = {
 				'/owner/setAvatar',
 				'/owner/setActivity',
 				'/owner/leaveServer',
+				'/owner/setUsername',
+				'/owner/setNickname',
 			],
 		},
 		{
