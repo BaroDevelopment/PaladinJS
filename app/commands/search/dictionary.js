@@ -1,6 +1,6 @@
 const { MessageEmbed, MessageAttachment } = require('discord.js');
 const { gPrefix } = require('../../config.json');
-const { images } = require('../util/statics.js');
+const { images } = require('../../util/statics.js');
 const fetch = require('node-fetch');
 
 module.exports = {

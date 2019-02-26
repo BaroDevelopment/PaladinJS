@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 const { gPrefix } = require('../../config.json');
-const emote = require('../util/emote.js');
+const emote = require('../../util/emote.js');
 const paladin = require('../../paladin.js');
 
 // get your google_search_engine_id from here -> https://cse.google.com

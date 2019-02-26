@@ -1,6 +1,6 @@
 const { gPrefix } = require('../../config.json');
 const Discord = require('discord.js');
-const emote = require('../util/emote.js');
+const emote = require('../../util/emote.js');
 
 module.exports = {
 	name: 'ShardInfo',

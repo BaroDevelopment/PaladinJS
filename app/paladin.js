@@ -5,8 +5,8 @@ const Discord = require('discord.js');
 const config = require('./config.json');
 const { gPrefix, token } = require('./config.json');
 const Postgres = require('pg');
-const util = require('./commands/util/paladinUtils.js');
-const emote = require('./commands/util/emote.js');
+const util = require('./util/paladinUtils.js');
+const emote = require('./util/emote.js');
 const afk = require('./commands/info/afk.js');
 
 global.messagesRecieved = 0;

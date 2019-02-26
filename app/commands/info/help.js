@@ -1,6 +1,6 @@
 const { gPrefix } = require('../../config.json');
-const { images } = require('../util/statics.js');
-const emote = require('../util/emote.js');
+const { images } = require('../../util/statics.js');
+const emote = require('../../util/emote.js');
 const Discord = require('discord.js');
 
 const make12Chars = s => {

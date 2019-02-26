@@ -1,6 +1,6 @@
 const {MessageEmbed} = require('discord.js');
 const { gPrefix } = require('../../config.json');
-const { getUser } = require('../util/paladinUtils.js');
+const { getUser } = require('../../util/paladinUtils.js');
 
 module.exports = {
 	name: 'Avatar',

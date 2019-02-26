@@ -1,9 +1,9 @@
 const { MessageEmbed } = require('discord.js');
 const { Permissions } = require('discord.js');
 const { gPrefix } = require('../../config.json');
-const emote = require('../util/emote.js');
-const { booldReaction, getChannel, formatDate } = require('../util/paladinUtils.js');
-const { images } = require('../util/statics.js');
+const emote = require('../../util/emote.js');
+const { booldReaction, getChannel, formatDate } = require('../../util/paladinUtils.js');
+const { images } = require('../../util/statics.js');
 
 // get your google_search_engine_id from here -> https://cse.google.com
 module.exports = {

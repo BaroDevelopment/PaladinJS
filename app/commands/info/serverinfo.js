@@ -1,7 +1,7 @@
 const { MessageEmbed } = require('discord.js');
 const { gPrefix } = require('../../config.json');
-const emote = require('../util/emote.js');
-const util = require('../util/paladinUtils.js');
+const emote = require('../../util/emote.js');
+const util = require('../../util/paladinUtils.js');
 
 
 const memberCount = guild => guild.members.filter(m => !m.user.bot);

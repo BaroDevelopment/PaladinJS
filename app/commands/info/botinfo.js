@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 const { gPrefix } = require('../../config.json');
-const statics = require('../util/statics.js');
-const util = require('../util/paladinUtils.js');
-const emote = require('../util/emote.js');
+const statics = require('../../util/statics.js');
+const util = require('../../util/paladinUtils.js');
+const emote = require('../../util/emote.js');
 const {getUptime} = require('./uptime.js');
 
 // get your google_search_engine_id from here -> https://cse.google.com

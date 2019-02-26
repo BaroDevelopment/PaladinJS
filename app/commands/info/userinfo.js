@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const { gPrefix } = require('../../config.json');
-const emote = require('../util/emote.js');
-const { getMember, formatDate } = require('../util/paladinUtils.js');
+const emote = require('../../util/emote.js');
+const { getMember, formatDate } = require('../../util/paladinUtils.js');
 
 // get your google_search_engine_id from here -> https://cse.google.com
 module.exports = {

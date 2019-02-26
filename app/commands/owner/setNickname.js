@@ -10,7 +10,7 @@ module.exports = {
 	guildOnly: false,
 	category: 'owner',
 	userPermissions: ['BOT_OWNER'],
-	params: ['`[name]` - Paladin\'s new nickname', `[reason]` - 'for audit-logs (optional)'],
+	params: ['`[name]` - Paladin\'s new nickname', '`[reason]` - for audit-logs (optional)'],
 	documentationURL: 'https://paladin.netlify.com/owner/setNickname.html',
 	arguments: [
 		{ name: 'name', type: String, multiple: true, alias: 'n', defaultOption: true },

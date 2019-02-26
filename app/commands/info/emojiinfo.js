@@ -1,6 +1,6 @@
 const { MessageEmbed, Util } = require('discord.js');
 const { gPrefix } = require('../../config.json');
-const {formatDate} = require('../util/paladinUtils.js')
+const {formatDate} = require('../../util/paladinUtils.js')
 
 module.exports = {
 	name: 'EmojiInfo',

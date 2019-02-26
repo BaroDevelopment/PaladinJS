@@ -1,7 +1,7 @@
 const { gPrefix } = require('../../config.json');
 const Discord = require('discord.js');
-const emote = require('../util/emote.js');
-const { images } = require('../util/statics.js');
+const emote = require('../../util/emote.js');
+const { images } = require('../../util/statics.js');
 
 module.exports = {
 	name: 'Ping',

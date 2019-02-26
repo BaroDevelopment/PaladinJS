@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 const { gPrefix } = require('../../config.json');
-const emote = require('../util/emote.js');
-const { images } = require('../util/statics.js');
-const { getMember } = require('../util/paladinUtils.js');
+const emote = require('../../util/emote.js');
+const { images } = require('../../util/statics.js');
+const { getMember } = require('../../util/paladinUtils.js');
 
 module.exports = {
 	name: 'Ban',
