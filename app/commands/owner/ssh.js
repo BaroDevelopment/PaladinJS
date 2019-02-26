@@ -1,7 +1,8 @@
 const { MessageEmbed } = require('discord.js');
 const { host } = require('../../config.json');
 const { gPrefix } = require('../../config.json');
-var SSH = require('simple-ssh');
+const emote = require('../../util/emote.js');
+const SSH = require('ssh2-promise');
 
 module.exports = {
 	name: 'SSH',
@@ -31,29 +32,20 @@ module.exports = {
 		{ name: 'command', type: String, multiple: true, alias: 'c', defaultOption: true },
 		{ name: 'delete', type: Boolean, alias: 'd' },
 	],
-	execute(message, args) {
+	async execute(message, args) {
+		const embed = new MessageEmbed().setColor('#FF00FF');
+		const trim = (str, max) => ((str.length > max) ? `${str.slice(0, max - 3)}...` : str);
 
-		var ssh = new SSH({
+		const ssh = new SSH({
 			host: host.ip,
-			user: host.username,
-			pass: host.password,
+			username: host.username,
+			password: host.password,
 		});
-
-		ssh.on('error', function(err) {
-			message.channel.send('Oops, something went wrong.');
-			message.channel.send(err);
-			ssh.end();
-		});
-		ssh.on('ready', function(ready) {
-			const embed = new MessageEmbed().setColor('#04ff00');
-			embed.setDescription('Successfully Connected');
-			message.channel.send(embed);
-		});
-
-		ssh.exec(args.command.join(' '), {
-			out: function(stdout) {
-				console.log(stdout)
-			},
-		}).start();
+		const command = args._unknown ? args.command.join(' ') + ' ' + args._unknown.join(' ') : args.command.join(' ')
+		ssh.connect().then(embed.setFooter('Connection established', emote.check.url))
+			.catch(() => embed.setFooter(' Connection Failed!', emote.xmark.url));
+		const data = await ssh.exec(command).catch(e => e);
+		data ? embed.setDescription(`\`${trim(data, 1000)}\``) : embed.setDescription('Executed without output');
+		message.channel.send(embed);
 	},
 };

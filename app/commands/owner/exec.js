@@ -1,7 +1,7 @@
 const { MessageEmbed } = require('discord.js');
-const { host } = require('../../config.json');
 const { gPrefix } = require('../../config.json');
 const util = require('util');
+const exec = util.promisify(require('child_process').exec);
 
 module.exports = {
 	name: 'Exec',
@@ -24,7 +24,6 @@ module.exports = {
 	async execute(message, args) {
 
 		const embed = new MessageEmbed().setColor('#FF00FF');
-		const exec = util.promisify(require('child_process').exec);
 		const trim = (str, max) => ((str.length > max) ? `${str.slice(0, max - 3)}...` : str);
 
 		if (!args.command)
@@ -41,8 +40,10 @@ module.exports = {
 
 		stdout ? output = `\`${trim(stdout, 1000)}\`` : stderr ? output = `\`${trim(stdout, 1000)}\`` :
 			'```bash\nExecuted successfully without output```';
+
 		if (output.length <= 2)
 			output = `Failed to execute!`;
+
 		return message.channel.send(embed.setDescription(output));
 	},
 };
