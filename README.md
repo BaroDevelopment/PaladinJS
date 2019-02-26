@@ -55,6 +55,6 @@ You can donate form [here](https://donatebot.io/checkout/393207704211947521) usi
 <img src="https://cdn.discordapp.com/attachments/396964573007052800/549494368717897728/postgres.png" alt="Postgres SQL" height="100" />
 </a>
 
-## Netdata for monitoring
+## We use Netdata to monitor our application
 <a href="http://81.169.230.19:19999/#menu_system;theme=slate">
 <img src="https://cdn.discordapp.com/attachments/396964573007052800/549687338352115715/netdata.gif" alt="Netdata"/></a>
