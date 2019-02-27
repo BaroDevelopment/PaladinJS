@@ -38,6 +38,7 @@ module.exports = {
 			children: [
 				'/owner/eval',
 				'/owner/ssh',
+				'/owner/exec',
 				'/owner/setAvatar',
 				'/owner/setActivity',
 				'/owner/leaveServer',

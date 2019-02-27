@@ -1,22 +1,28 @@
-# SSH Command
-Execute commands using SSH. Mainly used to execute script like start, restart and update
+## SSH Command
+Execute command line commands on connected device using SSH. 
+Mainly used to execute scripts like start, restart and update
+
+The starting point/ base of the command is `/root/`.
+
+::: tip 
+This command is the same like [exec](./exec.md).
+It is executing a given command on the cli the device is connected to via ssh.
+:::
 
 ### User Permissions needed
 `BOT_OWNER`
+
 ### Bot Permissions needed
 `none`
 
-### Alias:
->`none`
-
 ### Parameters
-`[JAVASCRIPT]` - Your Javascript Code to execute
+`[command]` - Your command line code to execute
 
 ### Cooldown
-`1 seconds`
+`1 second`
 
 ### Usage
-`-ssh [command]` - Command to execute in host's terminal
+`-ssh [command]`
 
 ## Examples
 
@@ -33,10 +39,6 @@ Execute commands using SSH. Mainly used to execute script like start, restart an
 -ssh cd PaladinJS && sh update.sh                   => Update PaladinJS
 -ssh sh restart.sh && cd PaladinJS && sh update.sh  => restart Paladin and update PaladinJS
 ```
-
-::: danger Definition of Update
-Git pull and start bot
-:::
 
 ::: tip How to stop the bot
 ```bash

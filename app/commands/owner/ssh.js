@@ -41,6 +41,7 @@ module.exports = {
 			username: host.username,
 			password: host.password,
 		});
+
 		const command = args._unknown ? args.command.join(' ') + ' ' + args._unknown.join(' ') : args.command.join(' ')
 		ssh.connect().then(embed.setFooter('Connection established', emote.check.url))
 			.catch(() => embed.setFooter(' Connection Failed!', emote.xmark.url));
