@@ -53,6 +53,7 @@ module.exports = {
 				'/moderation/kick',
 				'/moderation/ban',
 				'/moderation/purge',
+				'/moderation/channeltopic',
 			],
 		},
 		{

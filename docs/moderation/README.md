@@ -8,4 +8,6 @@ Here is an overview about all available moderation commands
 
 >[Purge Command](./purge.md)
 
+>[Channeltopic Command](./channeltopic.md)
+
 <CustomLayout/>
