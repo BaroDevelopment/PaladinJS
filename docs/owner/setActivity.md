@@ -12,7 +12,7 @@ Change Paladin's activity
 
 **How to pass activity type:**
 
-`-setActivity [activity] [type]`
+`-setActivity [activity] -t [type]`
 
 Available types:
 - PLAYING        **(default)**
@@ -22,6 +22,8 @@ Available types:
 
 ### Example
 `-setActivity i am borred -t WATCHING`
+
+`-setActivity check me out -t STREAMING -u https://www.twitch.tv/misselion`
 
 ### Parameters
 `[activity]` - The message to display

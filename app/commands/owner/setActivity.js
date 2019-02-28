@@ -15,11 +15,12 @@ module.exports = {
 	arguments: [
 		{ name: 'msg', type: String, alias: 'm', multiple: true, defaultOption: true },
 		{ name: 'type', type: String, alias: 't', defaultValue: 'PLAYING' },
+		{ name: 'url', type: String, alias: 'u' },
 		{ name: 'delete', type: Boolean, alias: 'd' },
 	],
 	async execute(message, args) {
 
-		const embed = new Discord.MessageEmbed().setColor('#FF00FF')
+		const embed = new Discord.MessageEmbed().setColor('#FF00FF');
 		/** available types
 		 PLAYING
 		 STREAMING
@@ -27,9 +28,10 @@ module.exports = {
 		 WATCHING
 		 */
 		try {
-			await message.client.user.setActivity(args.msg.join(' '), {type: args.type}).catch(console.error)
-		}catch (e) {
-			await message.client.user.setActivity(args._unknown.join(' '), {type: args.type}).catch(console.error)
+			!args.url ? await message.client.user.setActivity(args.msg.join(' '), { type: args.type })
+				: await message.client.user.setActivity(args.msg.join(' '), { type: args.type, url: args.url });
+		} catch (e) {
+			await message.client.user.setActivity(args._unknown.join(' '), { type: args.type }).catch(console.error);
 		}
 		message.channel.send(embed.setDescription('You have successfully changed my activity!'));
 	},
