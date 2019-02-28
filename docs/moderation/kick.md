@@ -1,4 +1,4 @@
-# Kick Command
+## Kick Command
 Kick a member from the server. Kicked user will get a DM with reason aswell.
 
 ### User Permissions needed

@@ -1,4 +1,4 @@
-# Purge Command
+## Purge Command
 
 ### User Permissions needed
 > <Badge text="MANAGE_MESSAGES" type="error" vertical="middle"/>

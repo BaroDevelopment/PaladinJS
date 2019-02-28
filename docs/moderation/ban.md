@@ -1,4 +1,4 @@
-# Ban Command
+## Ban Command
 Ban a member from the server. Banned user will get a DM with reason aswell.
 
 ### User Permissions needed
