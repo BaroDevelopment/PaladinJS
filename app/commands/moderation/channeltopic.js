@@ -21,10 +21,8 @@ module.exports = {// TODO: Docs
 		{ name: 'reason', type: String, multiple: true, alias: 'r' },
 		{ name: 'delete', type: Boolean, alias: 'd' },
 	],
-	async execute(message, args) {
-		const embed = new Discord.MessageEmbed().setColor('#FF00FF');
+	execute(message, args) {
 		const topic = args.topic ? args.topic.join(' ') : '';
-
 		!args.reason ?  message.channel.setTopic(topic) : message.channel.setTopic(topic, args.reason.join(' '))
 	},
 };
