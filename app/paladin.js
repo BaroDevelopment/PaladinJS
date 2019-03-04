@@ -1,57 +1,42 @@
+const Discord = require('discord.js');
 const fs = require('fs');
 const commandLineArgs = require('command-line-args');
-const consoleColor = require('colors');
-const Discord = require('discord.js');
 const config = require('./config.json');
-const { gPrefix, token } = require('./config.json');
-const Postgres = require('pg');
 const util = require('./util/paladinUtils.js');
 const emote = require('./util/emote.js');
 const afk = require('./commands/info/afk.js');
+const { commandModel, guildModel } = require('./sequelize.js');
+require('colors');
 
 global.messagesRecieved = 0;
 global.commandsExecuted = 0;
 global.afkUsers = new Map();
 
 const client = new Discord.Client({ fetchAllMembers: true });
-(client.shard) ? process.title = `Paladin-Shard-${client.shard.id}` : process.title = 'PaladinJS';
-
-/* ### Internal Sharding ###*/
-// const client = new Discord.Client({ shardCount: 'auto' });
-// const client = new Discord.Client({ shards: [0, 1, 2] });
 client.commands = new Discord.Collection();
-
-client.databaseClient = new Postgres.Client({
-	connectionString: config.database,
-});
-
-// Database connection
-const dbinfo = `${client.databaseClient.database}@${client.databaseClient.host}:${client.databaseClient.port}`;
-client.databaseClient.connect().then(() => console.log(`Connected to ${dbinfo}`.blue.bold))
-	.catch(reason => console.log(`Failed to connect to database\n${reason}`.red.bold));
-
 const cooldowns = new Discord.Collection();
 
-client.once('ready', () => {
+client.login(config.token);
+
+(client.shard) ? process.title = `Paladin-Shard-${client.shard.id}` : process.title = 'PaladinJS';
+
+client.once('ready', async () => {
 	console.log(`---------------------------------
 Logged in as: ${client.user.username}#${client.user.discriminator}
 User ID: ${client.user.id}
 ---------------------------------`.magenta.bold);
-	initPrefixes();
+	await initPrefixes();
 	loadCommands();
 });
-
-// login to Discord with your app's token
-client.login(token);
 
 client.on('message', async message => {
 		afk.handleAfkMessage(message);
 		messagesRecieved++;
-		let prefix = message.guild ? client.prefixes.get(message.guild.id) : gPrefix;
+		let prefix = message.guild ? client.prefixes.get(message.guild.id) : config.gPrefix;
 
 		if (!prefix) {
-			prefix = gPrefix;
-			client.prefixes.set(message.guild.id, gPrefix);
+			prefix = config.gPrefix;
+			client.prefixes.set(message.guild.id, config.gPrefix);
 			fixDatabase(message.guild.id, message.guild.name).catch(e => console.log(e));
 		}
 
@@ -118,7 +103,7 @@ client.on('message', async message => {
 			// message.reply('there was an error trying to execute that command!');
 		}
 		if (params.delete)
-			message.delete({timeout: 2000});
+			message.delete({ timeout: 2000 });
 	},
 );
 
@@ -126,22 +111,25 @@ client.on('error', console.error);
 // client.on('warn', (e) => console.warn(e));
 // client.on('debug', (e) => console.info(e));
 
-function initPrefixes() {
+async function initPrefixes() {
 	client.prefixes = new Discord.Collection();
-	const query = 'Select id, prefix from settings.guild';
-	client.databaseClient.query(query).then(res => {
-		res.rows.map(r => client.prefixes.set(r['id'], r['prefix']));
-	}).catch(console.error);
+	const res = await guildModel.findAll({ attributes: ['id', 'prefix'], raw: true }).catch(e => e);
+	res.forEach(r => {
+		client.prefixes.set(r['id'], r['prefix']);
+	});
 }
 
 async function fixDatabase(id, name) {
-	client.databaseClient.query('Select id from settings.guild where id=$1', [id]).then(res => {
-		const query = 'Insert into settings.guild values ($1,$2,$3,$4,$5,$6,$7,$8)';
-		const values = [id, gPrefix, name, '', '', '', false, ''];
-		if (!res.rowCount) {
-			client.databaseClient.query(query, values).catch(e => console.log(e));
-		}
-	}).catch(console.error);
+	await guildModel.create({
+		id: id,
+		prefix: config.gPrefix,
+		name: name.toLowerCase(),
+		welcomeMessage: '',
+		welcomeAvatar: '',
+		ticketMessage: '',
+		welcomeDM: false,
+		ticketChannel: '',
+	}).catch(e => e);
 	insertCommands(id);
 }
 
@@ -150,21 +138,20 @@ function insertCommands(id) {
 }
 
 async function commandEnabled(id, name) {
-	const query = 'Select enabled from settings.commands where id=$1 and name = $2';
-	const values = [id, name.toLowerCase()];
-	const enabled = await client.databaseClient.query(query, values).catch(console.error);
-	try {
-		return enabled.rows[0]['enabled'];
-	} catch (e) {
-		addCommandToDB(id, name);
-	}
-	return false;
+	const enabled = await commandModel.findOne({ raw: true, where: { enabled: true, id: id, name: name.toLowerCase()} });
+	if (enabled == null)
+		addCommandToDB(id, name)
+	return !!enabled
 }
 
 function addCommandToDB(id, name) {
-	const query = `Insert into settings.commands values ($1,$2,$3,$4,$5)`;
-	const values = [id, name.toLowerCase(), config.commandsEnabled, [], []];
-	client.databaseClient.query(query, values).catch(e => e);
+	commandModel.create({
+		id: id,
+		name: name.toLowerCase(),
+		enabled: true,
+		bannedChannels: [],
+		bannedRoles: [],
+	}).catch(e => e);
 }
 
 function loadCommands() {

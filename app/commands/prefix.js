@@ -1,4 +1,5 @@
 const { gPrefix } = require('../config.json');
+const { guildModel } = require('../sequelize.js');
 
 module.exports = {
 	name: 'Prefix',
@@ -12,11 +13,12 @@ module.exports = {
 	userPermissions: ['MANAGE_GUILD'],
 	botPermissions: [],
 	documentationURL: '',
-	execute(message, args) {
-		message.react(message.client.emojis.find(value => value.name === 'check')).catch(reason => reason);
-			message.client.prefixes.set(message.guild.id, args[0]);
-			const query = 'Update settings.guild set prefix = $1 where id = $2';
-			const values = [args[0], message.guild.id];
-			message.client.databaseClient.query(query, values).then(message.channel.send(`New Prefix is ${args[0]}`))
+	arguments: [
+		{ name: 'prefix', type: String, multiple: true, alias: 'p', defaultOption: true },
+	],
+	async execute(message, args) {
+		message.client.prefixes.set(message.guild.id, args.prefix[0]);
+		const update = await guildModel.update({ prefix: args.prefix[0] }, { where: { id: message.guild.id } });
+		message.channel.send(`New Prefix is ${args.prefix[0]}`)
 	},
 };

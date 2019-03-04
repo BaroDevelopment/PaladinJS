@@ -14,16 +14,19 @@ module.exports = {// TODO: Docs
 	guildOnly: true,
 	userPermissions: ['MANAGE_EMOJIS'],
 	botPermissions: ['MANAGE_EMOJIS'],
-	params: [`\`emote\` - emote to add as :emote: or url`],
+	params: [`\`emote\` - emote to add as or url`],
 	cooldown: 5,
 	arguments: [
-		{ name: 'name', type: String, alias: 'n', defaultOption: true },
-		{ name: 'emoji', type: String, alias: 'e', defaultValue: ''},
+		{ name: 'msg', type: String, alias: 'm', multiple: true, defaultOption: true },
 		{ name: 'delete', type: Boolean, alias: 'd' },
 	],
 	execute(message, args) {
-		console.log(args)
 		const embed = new Discord.MessageEmbed().setColor('#FF00FF');
-		//message.guild.emojis.create()
+		if (args.msg.length !== 2)
+			return message.channel.send(embed.setDescription('Invalid URL'))
+
+		message.guild.emojis.create(args.msg[1], args.msg[0])
+			.then(emoji => message.channel.send(embed.setDescription('Successfully added new emote: ' + emoji.toString())))
+			.catch(e => message.channel.send(embed.setDescription('Invalid URL')));
 	},
 };
