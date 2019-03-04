@@ -10,4 +10,6 @@ Here is an overview about all available moderation commands
 
 >[Channeltopic Command](./channeltopic.md)
 
+>[Emote Command](./emote.md)
+
 <CustomLayout/>

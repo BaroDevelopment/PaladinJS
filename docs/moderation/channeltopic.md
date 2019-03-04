@@ -1,4 +1,5 @@
 ## Channeltopic Command
+Change the topic of a channel
 
 ### User Permissions needed
 > <Badge text="MANAGE_CHANNELS" type="error" vertical="middle"/>

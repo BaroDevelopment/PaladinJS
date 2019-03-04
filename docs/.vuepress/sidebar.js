@@ -54,6 +54,7 @@ module.exports = {
 				'/moderation/ban',
 				'/moderation/purge',
 				'/moderation/channeltopic',
+				'/moderation/emote',
 			],
 		},
 		{
