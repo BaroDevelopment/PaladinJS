@@ -14,7 +14,7 @@ const sequelize = new Sequelize(config.database, {
 });
 
 sequelize.authenticate().then(() => console.log(`Connected to ${dbinfo}`.blue.bold))
-	.catch(err => console.error('Unable to connect to the database:', err));
+	.catch(err => console.error(`Unable to connect to the database:`.red.bold, err));
 
 const commandModel = commands(sequelize, Sequelize);
 const guildModel = guilds(sequelize, Sequelize);
