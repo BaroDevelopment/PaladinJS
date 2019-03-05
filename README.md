@@ -22,6 +22,8 @@ This page only gives very basic information, for the detailed information about 
 
 - [Documentation](https://paladin.netlify.com/)
 
+- [Join Paladin to your server](https://discordapp.com/oauth2/authorize?client_id=455157940140113921&scope=bot&permissions=2146958839)
+
 <img align="center" src="https://discordapp.com/api/guilds/393207704211947521/widget.png?style=banner2"/>
 
 ## Contributing
