@@ -7,7 +7,7 @@ module.exports = {
 	category: 'misc',
 	guildOnly: true,
 	args: true,
-	documentationURL: 'https://paladin.netlify.com/search/json.html',
+	documentationURL: 'https://paladin.netlify.com/misc/json.html',
 	usage: [`${gPrefix}json [channel-id] [message-id]`],
 	params: ['[`channel-id` - ID of the channel where the embed is in', '[`message-id` - ID of the message'],
 	cooldown: 30,

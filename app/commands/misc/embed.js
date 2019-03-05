@@ -6,7 +6,7 @@ module.exports = {
 	category: 'misc',
 	guildOnly: false,
 	args: true,
-	documentationURL: 'https://paladin.netlify.com/search/embed.html',
+	documentationURL: 'https://paladin.netlify.com/misc/embed.html',
 	usage: [`${gPrefix}embed [message]`, `${gPrefix}embed [json]`],
 	params: ['[`json]` - The JSON code to convert into an embed', '[`message]` - The message to display in an embed'],
 	cooldown: 5,
