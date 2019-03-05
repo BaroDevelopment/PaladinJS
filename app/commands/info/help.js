@@ -34,12 +34,14 @@ module.exports = {
 			let ownerValue = '```css\n';
 			let moderationValue = '```css\n';
 			let searchValue = '```css\n';
+			let miscValue = '```css\n';
 
 			embed.setDescription(this.description)
 			const infoCommands = commands.filter(c => c.category == 'info').map((k, v) => k);
 			const ownerCommands = commands.filter(c => c.category == 'owner').map((k, v) => k);
 			const moderationCommands = commands.filter(c => c.category == 'moderation').map((k, v) => k);
 			const searchCommands = commands.filter(c => c.category == 'search').map((k, v) => k);
+			const miscCommands = commands.filter(c => c.category == 'misc').map((k, v) => k);
 
 			for (let i = 0; i < infoCommands.length; i++) {
 				if (i % 3 === 2)
@@ -59,20 +61,28 @@ module.exports = {
 				else
 					moderationValue += gPrefix + make12Chars(moderationCommands[i]['name'].toLowerCase());
 			}
-			for (let i = 0; i < moderationCommands.length; i++) {
+			for (let i = 0; i < searchCommands.length; i++) {
 				if (i % 3 === 2)
 					searchValue += gPrefix + make12Chars(searchCommands[i]['name'].toLowerCase()) + '\n';
 				else
 					searchValue += gPrefix + make12Chars(searchCommands[i]['name'].toLowerCase());
 			}
+			for (let i = 0; i < miscCommands.length; i++) {
+				if (i % 3 === 2)
+					miscValue += gPrefix + make12Chars(miscCommands[i]['name'].toLowerCase()) + '\n';
+				else
+					miscValue += gPrefix + make12Chars(miscCommands[i]['name'].toLowerCase());
+			}
 			infoValue += '\n```';
 			ownerValue += '\n```';
 			moderationValue += '\n```';
 			searchValue += '\n```';
+			miscValue += '\n```';
 
 			embed.addField(`Information Commands`, infoValue, false);
 			embed.addField(`Moderation Commands`, moderationValue, false);
 			embed.addField(`Search Commands`, searchValue, false);
+			embed.addField(`Misc Commands`, miscValue, false);
 			embed.addField(`Owner Commands`, ownerValue, false);
 			embed.addField('How to get the description of all those commands ?', `${gPrefix}help [command]`, false);
 			embed.addField('Example', `${gPrefix}help avatar`, false);

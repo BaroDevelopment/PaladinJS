@@ -58,6 +58,13 @@ module.exports = {
 			],
 		},
 		{
+			title: 'Misc Commands',
+			collapsable: true,
+			children: [
+				'/misc/json',
+			],
+		},
+		{
 			title: 'Search Commands',
 			collapsable: true,
 			children: [

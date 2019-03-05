@@ -33,6 +33,8 @@ You can donate form [here](https://donatebot.io/checkout/393207704211947521) usi
 
 >[Search Command](./search/README.md)
 
+>[Misc Command](./misc/README.md)
+
 >[Bot Owner Command](./owner/README.md)
 
 <br/>

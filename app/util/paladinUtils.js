@@ -77,4 +77,14 @@ module.exports = {
 		setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
 		return false;
 	},
+	postToHastebin(code, extension, message) {
+		const axios = require('axios');
+		if (!code)
+			return console.log('Input argument is required.');
+		axios.post('https://hastebin.com/documents', code)
+			.then(body => {
+				const url = 'https://hastebin.com/' + body.data.key + ((extension) ? '.' + extension : '');
+				message.channel.send('I have pasted your code to Hastebin:\n' + url);
+			}).catch(e => message.channel.send('Failed to upload ot hastebin.com'));
+	},
 };
