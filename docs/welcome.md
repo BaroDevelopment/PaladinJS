@@ -35,6 +35,8 @@ You can donate form [here](https://donatebot.io/checkout/393207704211947521) usi
 
 >[Misc Command](./misc/README.md)
 
+>[Media Command](./media/README.md)
+
 >[Bot Owner Command](./owner/README.md)
 
 <br/>

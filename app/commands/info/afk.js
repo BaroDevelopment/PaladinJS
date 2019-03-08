@@ -11,7 +11,7 @@ module.exports = {
 	documentationURL: 'https://paladin.netlify.com/information/afk.html',
 	usage: [`\`${gPrefix}afk [afk message]\``],
 	examples: [`\`${gPrefix}afk sleeping ... leave me a DM\``],
-	params: ['\`[afk message]\` - The message to display if someone mentions you.'],
+	params: ['`[afk message]` - The message to display if someone mentions you.'],
 	cooldown: 10,
 	arguments: [
 		{ name: 'msg', type: String, multiple: true, alias: 'm', defaultOption: true },

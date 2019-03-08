@@ -65,6 +65,13 @@ module.exports = {
 			],
 		},
 		{
+			title: 'Media Commands',
+			collapsable: true,
+			children: [
+				'/media/belike',
+			],
+		},
+		{
 			title: 'Search Commands',
 			collapsable: true,
 			children: [

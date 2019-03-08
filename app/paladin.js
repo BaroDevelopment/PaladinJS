@@ -161,6 +161,7 @@ function loadCommands() {
 	const moderationCommands = fs.readdirSync('./commands/moderation').filter(file => file.endsWith('.js'));
 	const searchCommands = fs.readdirSync('./commands/search').filter(file => file.endsWith('.js'));
 	const miscCommands = fs.readdirSync('./commands/misc').filter(file => file.endsWith('.js'));
+	const mediaCommands = fs.readdirSync('./commands/media').filter(file => file.endsWith('.js'));
 
 	for (const file of core) {
 		const command = require(`./commands/${file}`);
@@ -185,6 +186,10 @@ function loadCommands() {
 	}
 	for (const file of miscCommands) {
 		const command = require(`./commands/misc/${file}`);
+		client.commands.set(command.name.toLowerCase(), command);
+	}
+	for (const file of mediaCommands) {
+		const command = require(`./commands/media/${file}`);
 		client.commands.set(command.name.toLowerCase(), command);
 	}
 }
