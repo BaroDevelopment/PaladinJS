@@ -43,6 +43,9 @@ You can donate form [here](https://donatebot.io/checkout/393207704211947521) usi
 </a>
 
 ## Paladin uses
+<a href="https://vuejs.org/">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/512px-Vue.js_Logo_2.svg.png" alt="Vue.js"             height="100" />
+</a> 
 <a href="https://vuepress.vuejs.org/">
 <img src="https://cdn.discordapp.com/attachments/396964573007052800/549490451699466251/vuepress.png" alt="VuePress"             height="100" />
 </a> 
