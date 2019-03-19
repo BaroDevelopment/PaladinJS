@@ -6,6 +6,7 @@ module.exports = {
 	// markdown: {
 	// 	lineNumbers: true
 	// }
+	base: '/docs/',
 	dest: 'public',
 	plugins: [
 		'@vuepress/plugin-back-to-top',
