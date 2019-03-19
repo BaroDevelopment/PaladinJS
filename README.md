@@ -18,7 +18,9 @@ This page only gives very basic information, for the detailed information about 
 
 - [Web Site](https://www.paladinbot.online )
 
-- [Documentation](https://paladin.netlify.com/)
+- [Documentation](https://www.paladinbot.online/docs)
+
+- [Forum](https://www.paladinbot.online/forum)
 
 - [Join Paladin to your server](https://discordapp.com/oauth2/authorize?client_id=455157940140113921&scope=bot&permissions=2146958839)
 
