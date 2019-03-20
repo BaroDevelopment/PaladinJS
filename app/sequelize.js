@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const commands = require('./models/commandModel.js');
+const commands = require('./models/commandsModel.js');
 const guilds = require('./models/guildModel.js');
 const config = require('./config.json');
 require('colors');

@@ -12,7 +12,7 @@ module.exports = {
 	usage: [`\`${gPrefix}userinfo [@user]\``, `\`${gPrefix}userinfo [user id]\``, `\`${gPrefix}userinfo [user-name]\``],
 	args: false,
 	guildOnly: true,
-	aliases: ['uinfo'],
+	aliases: ['uinfo', 'whois'],
 	examples: [`\`${gPrefix}userinfo @YINGYANG#7777\``],
 	params: ['\`[@user]\` - The user as mention', '\`[user-id]\` - id of user', '\`[user-name]\` - name of user'],
 	cooldown: 5,

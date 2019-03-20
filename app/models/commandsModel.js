@@ -8,8 +8,15 @@ module.exports = (db, Sequelize) => {
 		},
 		name: {
 			type: Sequelize.TEXT,
-			unique: true,
 			primaryKey: true,
+			allowNull: false,
+		},
+		category: {
+			type: Sequelize.TEXT,
+			allowNull: false,
+		},
+		description: {
+			type: Sequelize.TEXT,
 			allowNull: false,
 		},
 		enabled: {

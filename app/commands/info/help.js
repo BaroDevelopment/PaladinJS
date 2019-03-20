@@ -35,6 +35,7 @@ module.exports = {
 			let moderationValue = '```css\n';
 			let searchValue = '```css\n';
 			let miscValue = '```css\n';
+			let mediaValue = '```css\n';
 
 			embed.setDescription(this.description)
 			const infoCommands = commands.filter(c => c.category == 'info').map((k, v) => k);
@@ -42,6 +43,7 @@ module.exports = {
 			const moderationCommands = commands.filter(c => c.category == 'moderation').map((k, v) => k);
 			const searchCommands = commands.filter(c => c.category == 'search').map((k, v) => k);
 			const miscCommands = commands.filter(c => c.category == 'misc').map((k, v) => k);
+			const mediaCommands = commands.filter(c => c.category == 'media').map((k, v) => k);
 
 			for (let i = 0; i < infoCommands.length; i++) {
 				if (i % 3 === 2)
@@ -73,16 +75,24 @@ module.exports = {
 				else
 					miscValue += gPrefix + make12Chars(miscCommands[i]['name'].toLowerCase());
 			}
+			for (let i = 0; i < mediaCommands.length; i++) {
+				if (i % 3 === 2)
+					mediaValue += gPrefix + make12Chars(mediaCommands[i]['name'].toLowerCase()) + '\n';
+				else
+					mediaValue += gPrefix + make12Chars(mediaCommands[i]['name'].toLowerCase());
+			}
 			infoValue += '\n```';
 			ownerValue += '\n```';
 			moderationValue += '\n```';
 			searchValue += '\n```';
 			miscValue += '\n```';
+			mediaValue += '\n```';
 
 			embed.addField(`Information Commands`, infoValue, false);
 			embed.addField(`Moderation Commands`, moderationValue, false);
 			embed.addField(`Search Commands`, searchValue, false);
 			embed.addField(`Misc Commands`, miscValue, false);
+			embed.addField(`Media Commands`, mediaValue, false);
 			embed.addField(`Owner Commands`, ownerValue, false);
 			embed.addField('How to get the description of all those commands ?', `${gPrefix}help [command]`, false);
 			embed.addField('Example', `${gPrefix}help avatar`, false);

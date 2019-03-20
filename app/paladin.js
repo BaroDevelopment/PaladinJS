@@ -18,7 +18,7 @@ const cooldowns = new Discord.Collection();
 
 client.login(config.token);
 
-(client.shard) ? process.title = `Paladin-Shard-${client.shard.id}` : process.title = 'PaladinJS';
+client.shard ? process.title = `Paladin-Shard-${client.shard.id}` : process.title = 'PaladinJS';
 
 client.once('ready', async () => {
 	console.log(`---------------------------------
@@ -28,6 +28,8 @@ User ID: ${client.user.id}
 	await initPrefixes();
 	loadCommands();
 });
+
+
 
 client.on('message', async message => {
 		afk.handleAfkMessage(message);
@@ -89,7 +91,7 @@ client.on('message', async message => {
 
 		try {
 			if (message.guild) {
-				const enabled = await commandEnabled(message.guild.id, command.name);
+				const enabled = await commandEnabled(message.guild.id, command);
 				if (!enabled)
 					return message.channel.send(`${command.name} Command is disabled in this server!`);
 				command.execute(message, params);
@@ -106,6 +108,10 @@ client.on('message', async message => {
 			message.delete({ timeout: 2000 });
 	},
 );
+
+client.on('guildCreate', guild => {
+	fixDatabase(guild.id, guild.name)
+})
 
 client.on('error', console.error);
 // client.on('warn', (e) => console.warn(e));
@@ -134,24 +140,28 @@ async function fixDatabase(id, name) {
 }
 
 function insertCommands(id) {
-	client.commands.forEach(command => addCommandToDB(id, command.name));
+	console.log('Inserting ALL Commands')
+	client.commands.forEach(command => addCommandToDB(id, command));
 }
 
-async function commandEnabled(id, name) {
-	const enabled = await commandModel.findOne({ raw: true, where: { enabled: true, id: id, name: name.toLowerCase()} });
+async function commandEnabled(id, command) {
+	const enabled = await commandModel.findOne({ raw: true, where: { enabled: true, id: id, name: command.name.toLowerCase()} });
 	if (enabled == null)
-		addCommandToDB(id, name)
+		insertCommands(id)
 	return !!enabled
 }
 
-function addCommandToDB(id, name) {
+function addCommandToDB(id, command) {
+	// console.log('Adding new Command: (' + id + '  ' , command.name + ' )')
 	commandModel.create({
 		id: id,
-		name: name.toLowerCase(),
+		name: command.name.toLowerCase(),
+		category: command.category,
+		description: command.description,
 		enabled: true,
 		bannedChannels: [],
 		bannedRoles: [],
-	}).catch(e => e);
+	}).catch(e => console.log(e));
 }
 
 function loadCommands() {
