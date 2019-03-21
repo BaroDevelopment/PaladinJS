@@ -161,7 +161,7 @@ function addCommandToDB(id, command) {
 		enabled: true,
 		bannedChannels: [],
 		bannedRoles: [],
-	}).catch(e => console.log(e));
+	}).catch(e => e);
 }
 
 function loadCommands() {
