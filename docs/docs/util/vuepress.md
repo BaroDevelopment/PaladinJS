@@ -60,7 +60,3 @@ See [Deployment Guide](https://v1.vuepress.vuejs.org/guide/deploy.html) for guid
 - [Discord.js Guide ](https://discordjs.guide/)
 - [Vuepress-theme-yuu](https://github.com/Danktuary/vuepress-theme-yuu)
 - [Vue Discord Message](https://github.com/Danktuary/vue-discord-message)
-
-
-
-<CustomLayout/>

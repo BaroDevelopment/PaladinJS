@@ -15,5 +15,3 @@ Let the bot leave a Server
 
 ### Cooldown
 `1 second`
-
-<CustomLayout/>

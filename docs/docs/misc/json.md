@@ -32,5 +32,3 @@ To avoid spam the bot will post the code to [Hastebin](https://hastebin.com/) an
 ### Previev
 
 ![JSON Preview](https://cdn.discordapp.com/attachments/469576672128139275/552262115373613073/unknown.png)
-
-<CustomLayout/>

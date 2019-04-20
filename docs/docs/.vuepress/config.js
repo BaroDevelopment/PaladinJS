@@ -6,14 +6,29 @@ module.exports = {
 	// markdown: {
 	// 	lineNumbers: true
 	// }
-	base: '/docs/',
+	base: '',
 	dest: 'public',
 	plugins: [
 		'@vuepress/plugin-back-to-top',
+		'@vuepress/nprogress',
+		'vuepress-plugin-export',
+		['mathjax', {
+			target: 'svg',
+			presets: [
+				'\\def\\lr#1#2#3{\\left#1#2\\right#3}',
+			],
+			macros: {
+				'*': '\\times',
+				'\\Z': '\\mathbb{Z}',
+				'\\R': '\\mathbb{R}',
+				'\\N': '\\mathbb{N}',
+				'\\Q': '\\mathbb{Q}',
+			},
+		}],
 	],
 	themeConfig: {
 		repo: 'SenaxDev/PaladinJS',
-		docsDir: 'docs/',
+		docsDir: 'docs/docs/',
 		editLinks: true,
 		sidebarDepth: 0,
 		lastUpdated: true,

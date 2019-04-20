@@ -25,5 +25,3 @@ The uptime is also displayed in the [ServerInfo Command](https://ylngyang.github
 ### Previev
 
 ![Avatar Usage Preview](https://cdn.discordapp.com/attachments/469576672128139275/547384084721172480/unknown.png)
-
-<CustomLayout/>

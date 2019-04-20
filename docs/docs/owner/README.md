@@ -15,5 +15,3 @@ Here is an overview about all available information commands
 >[SetAvatar Command](./setAvatar.md)
 
 >[SetActivity Command](./setActivity.md)
-
-<CustomLayout/>

@@ -134,7 +134,8 @@ Right aligned columns
 ### Embeds
 
 ```
-::: tip Ahhhhh
+::: tip YINGYANG - Lead Developer & Maintainer
+![avatar](https://cdn.discordapp.com/attachments/396964573007052800/534165823645024296/YingYang.gif)
 Theme components are subject to the same [browser API access restrictions](./markdown.md).
 :::
 
@@ -149,8 +150,14 @@ Theme components are subject to the same [browser API access restrictions](./mar
 >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
 invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
 ```
-::: tip Ahhhhh
-Theme components are subject to the same [browser API access restrictions](./README.md).
+::: tip YINGYANG - Lead Developer & Maintainer
+![avatar](https://cdn.discordapp.com/attachments/396964573007052800/534165823645024296/YingYang.gif)
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+<em>All inquires about Lorem can be sent to <a href="mailto:zach@mtgjson.com">test@example.com</a></em>
 :::
 
 ::: warning Memes
@@ -339,4 +346,11 @@ See [how to change output](https://github.com/markdown-it/markdown-it-emoji#chan
 
 A list of all emojis available can be found [here](https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/full.json).
 
-<CustomLayout/>
+## Plugins
+
+### BackToTop
+[Docs](https://v1.vuepress.vuejs.org/plugin/official/plugin-back-to-top.html)
+
+### Export - PDF
+
+[GitHub](https://github.com/ulivz/vuepress-plugin-export)

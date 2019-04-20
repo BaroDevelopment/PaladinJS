@@ -28,5 +28,3 @@ If no topic) is given then the channel topic will be cleared
 ### Previev
 
 >![Channel Topic Preview](https://cdn.discordapp.com/attachments/396964573007052800/494429935813787659/ChannelTopic.gif)
-
-<CustomLayout/>

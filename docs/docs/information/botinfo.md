@@ -26,5 +26,3 @@ Get an overview about Paladin Stats
 ### Previev
 
 ![Avatar Usage Preview](https://cdn.discordapp.com/attachments/469576672128139275/546839969185136650/unknown.png)
-
-<CustomLayout/>

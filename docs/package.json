@@ -9,9 +9,11 @@
   "license": "MIT",
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.0",
-    "vuepress": "^1.0.0-alpha.39"
+    "@vuepress/plugin-nprogress": "^1.0.0-alpha.47",
+    "vuepress": "^1.0.0-alpha.47"
   },
   "dependencies": {
-    "semver": "^5.5.1"
+    "semver": "^5.5.1",
+    "vuepress-plugin-mathjax": "^1.2.4"
   }
 }

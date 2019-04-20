@@ -40,5 +40,3 @@ You can **not** execute this command in DM's
 ### Previev
 
 ![Avatar Usage Preview](https://cdn.discordapp.com/attachments/469576672128139275/547889049441140737/unknown.png)
-
-<CustomLayout/>

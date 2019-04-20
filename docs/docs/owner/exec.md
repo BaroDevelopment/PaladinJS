@@ -25,6 +25,3 @@ It is executing a given command on the cli the device is running on.
 
 ### Examples
 Check out [ssh](./ssh.md) for some examples
-
-
-<CustomLayout/>

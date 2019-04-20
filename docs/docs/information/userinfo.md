@@ -40,5 +40,3 @@ If **no** user mentioned then bot will show only your user information.
 ### Previev
 
 ![Avatar Usage Preview](https://cdn.discordapp.com/attachments/469576672128139275/546422783551209504/unknown.png)
-
-<CustomLayout/>

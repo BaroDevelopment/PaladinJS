@@ -39,5 +39,3 @@ Also you can not execute this command in DM's
 ![Avatar Usage Preview](https://cdn.discordapp.com/attachments/469576672128139275/546406473337667624/unknown.png)
 
 ![Avatar Usage Preview](https://cdn.discordapp.com/attachments/469576672128139275/546473533652336660/unknown.png)
-
-<CustomLayout/>

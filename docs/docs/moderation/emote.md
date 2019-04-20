@@ -31,5 +31,3 @@ Your emote should have at least 128x128 pixels and will be resized to 32x32 pixe
 :::
 
 >![EmotePreview](https://cdn.discordapp.com/attachments/469576672128139275/552139331914170378/unknown.png)
-
-<CustomLayout/>

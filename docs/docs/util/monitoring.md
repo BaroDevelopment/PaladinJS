@@ -156,5 +156,3 @@ cd /usr/src/netdata.git./netdata-uninstaller.sh --force
 ## Other tools
 
 - [Grafana](https://grafana.com/)
-
-<CustomLayout/>

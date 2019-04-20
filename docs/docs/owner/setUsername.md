@@ -15,5 +15,3 @@ Change Paladin's username
 
 ### Cooldown
 `1 second`
-
-<CustomLayout/>

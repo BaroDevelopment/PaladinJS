@@ -36,5 +36,3 @@ let mergedMessages = messages.concat(messages_2)
       
  await client.shard.broadcastEval('this.destroy().then(() => process.exitCode = 0)');
 ```
-
-<CustomLayout/>

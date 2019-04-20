@@ -21,6 +21,11 @@ module.exports = {
 			children: ['/util/markdown'],
 		},
 		{
+			title: 'LaTeX',
+			collapsable: true,
+			children: ['/util/latex'],
+		},
+		{
 			title: 'Discord.js',
 			collapsable: true,
 			children: ['/util/discordjs'],

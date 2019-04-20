@@ -1,0 +1,22 @@
+.home
+  .hero
+    .action-button
+      background-color: $accentColor !important
+      &:hover
+        color: $accentColor !important
+        font-weight bold
+        background-color: white !important
+    .description
+      color desaturate(lighten($bg-color, 50%), 50%)
+  .features .footer
+    border-top-color desaturate(lighten($bg-color, 10%), 10%)
+  .feature
+    h2
+      color desaturate(lighten($bg-color, 70%), 40%)
+    p
+      color desaturate(lighten($bg-color, 50%), 50%)
+  .footer
+    color desaturate(lighten($bg-color, 50%), 50%)
+    border-image url("https://cdn.discordapp.com/attachments/396964573007052800/547342790904774671/Loading.gif") 100% 0 0 0;
+  .features
+    border-image url("https://cdn.discordapp.com/attachments/396964573007052800/547342790904774671/Loading.gif") 100% 0 0 0;

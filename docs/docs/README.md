@@ -16,6 +16,4 @@ features:
 footer: Paladin Bot Copyright © 2019
 
 ---
-
-<CustomLayout/>
 <PaladinStats/>

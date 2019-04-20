@@ -36,5 +36,3 @@ Available types:
 ![Activity Usage Preview](https://cdn.discordapp.com/attachments/469576672128139275/549682794604003360/unknown.png)
 
 ![Activity Usage Preview](https://cdn.discordapp.com/attachments/469576672128139275/549683115120001034/unknown.png)
-
-<CustomLayout/>

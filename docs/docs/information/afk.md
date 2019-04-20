@@ -36,5 +36,3 @@ If you mention multiple users then Paladin will show you which of them are afk
 :::
 
 ![Multiple afk mentions](https://cdn.discordapp.com/attachments/469576672128139275/547208561676255254/unknown.png)
-
-<CustomLayout/>

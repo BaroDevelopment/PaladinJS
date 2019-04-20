@@ -43,7 +43,5 @@ You can donate form [here](https://donatebot.io/checkout/393207704211947521) usi
 
 <br/>
 <DiscordWidget/>
-<CustomLayout/>
-
 
 

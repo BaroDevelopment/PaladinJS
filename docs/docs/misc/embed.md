@@ -23,5 +23,3 @@ Generate a beautiful and easy to create embed powered by [Embed-Visualizer](http
 `-embed [json]` - generate the code [here](https://leovoel.github.io/embed-visualizer/)
 
 >![Embed Preview](https://cdn.discordapp.com/attachments/469576672128139275/552280749512982569/unknown.png)
-
-<CustomLayout/>

@@ -19,5 +19,3 @@ Get Discord websocket and rest pings
 ### Previev
 
 ![Avatar Usage Preview](https://cdn.discordapp.com/attachments/469576672128139275/547369666033483814/unknown.png)
-
-<CustomLayout/>

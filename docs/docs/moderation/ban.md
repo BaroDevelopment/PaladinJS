@@ -40,5 +40,3 @@ You can only ban 1 user with 1 command.
 
 
 #### If DM is enabled then bot will send the banned user the same notification via DM
-
-<CustomLayout/>

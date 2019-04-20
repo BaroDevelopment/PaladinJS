@@ -48,5 +48,3 @@ the author is a bot, and the message is not older than 30 min
 Purge only messages from Stalista#7777
 
 `-purge 100 @Stalista#7777`
-
-<CustomLayout/>

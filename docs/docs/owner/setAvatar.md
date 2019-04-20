@@ -19,5 +19,3 @@ Change Paladin's avatar
 ::: danger Hint
 Make sure you pass a valid image url as an argument!
 :::
-
-<CustomLayout/>

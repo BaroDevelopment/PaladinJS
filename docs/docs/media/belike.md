@@ -25,5 +25,3 @@ Show others your coolness and send a Be-Like-Bill Meme
 If gender is not specified then it will be random.
 
 ![Belike Preview](https://cdn.discordapp.com/attachments/469576672128139275/553485938529927168/unknown.png)
-
-<CustomLayout/>

@@ -1,0 +1,41 @@
+.sidebar
+  font-size 16px
+  background-color $bg-color
+  width $sidebarWidth
+  position fixed
+  z-index 10
+  margin 0
+  top $navbarHeight
+  left 0
+  bottom 0
+  box-sizing border-box
+  border-right 1px solid $borderColor
+  overflow-y auto
+  .nav-links
+    border-bottom-color desaturate(lighten($accentColor, 10%), 10%)
+    border-right-color desaturate(lighten($accentColor, 10%), 10%)
+  a
+  &:hover,
+  &:focus,
+  &.active
+    border-left-color desaturate(lighten($accentColor, 10%), 10%)
+  .sidebar-heading
+    color desaturate(lighten($bg-color, 80%), 50%)
+    &.open,
+    &:hover
+      color desaturate(lighten($accentColor, 10%), 10%)
+  a.sidebar-link
+    color desaturate(lighten($bg-color, 80%), 50%)
+    &:hover,
+    &:focus,
+    &.active
+      color $accentColor
+
+.sidebar-mask
+  position fixed
+  z-index 9
+  top 0
+  left 0
+  width 100vw
+  height 100vh
+  display none

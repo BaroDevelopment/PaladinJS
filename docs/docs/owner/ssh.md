@@ -88,5 +88,3 @@ pm2 delete PaladinJS
 ```
 
 For more informations about PM2 click [here](https://pm2.keymetrics.io/) 
-
-<CustomLayout/>
