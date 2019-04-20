@@ -33,6 +33,7 @@ module.exports = {
 		sidebarDepth: 0,
 		lastUpdated: true,
 		displayAllHeaders: true,
+		logo: 'https://cdn.discordapp.com/attachments/396964573007052800/492135654919241739/PaladinMainAvatar.png',
 		nav: [
 			{
 				text: 'Home',
