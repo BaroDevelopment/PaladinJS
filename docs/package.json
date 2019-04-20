@@ -13,7 +13,7 @@
     "vuepress": "^1.0.0-alpha.47"
   },
   "dependencies": {
-    "semver": "^5.5.1",
+    "semver": "^6.0.0",
     "vuepress-plugin-mathjax": "^1.2.4"
   }
 }
