@@ -354,3 +354,27 @@ A list of all emojis available can be found [here](https://github.com/markdown-i
 ### Export - PDF
 
 [GitHub](https://github.com/ulivz/vuepress-plugin-export)
+
+## Google Slides
+1) Open your Google Slides
+2) Click on File -> Publish to Web -> Embed
+3) Paste the `iframe` code in your **.md** file
+```html
+<iframe src="YOUR_SLIDE_URL_HERE" frameborder="0" width="740" height="445" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+```
+::: tip Using PowerPoint Slides
+![avatar](http://icons.iconarchive.com/icons/carlosjj/microsoft-office-2013/256/PowerPoint-icon.png)
+It is also possible to embed a Powerpoint here! Simply upload your PowerPoint file to Google Drive and then open it with Google Slides.
+Finally follow the steps above. 
+
+Keep in mind that you can adjust the __size__ and __duration__ of the slides!
+:::
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSsCtuMTs6wAfElmy6Ee3QXUjJm-ocgR-RwTtZSWhnpCArExU7KIuwnk14jwp4Ec_1CVdGrTzhGFu-l/embed?start=false&loop=false&delayms=3000" frameborder="0" width="740" height="445" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+## PDF using Google PDF Viewer - iframe
+```html
+<iframe src="http://docs.google.com/gview?url=YOUR_PDF_URL_HERE&embedded=true" style="width:740px; height:445px;" frameborder="0"></iframe>
+```
+
+ <iframe src="http://docs.google.com/gview?url=https://www.markdownguide.org/assets/book/markdown-guide.pdf&embedded=true" style="width:740px; height:445px;" frameborder="0"></iframe>
