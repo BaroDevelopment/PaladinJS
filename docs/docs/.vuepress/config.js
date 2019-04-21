@@ -3,15 +3,39 @@ const sidebar = require('./sidebar.js');
 module.exports = {
 	title: 'Paladin Documentation',
 	description: 'A Multipurpose Premium Discord Bot with unique features.',
-	// markdown: {
-	// 	lineNumbers: true
-	// }
+	markdown: {
+		lineNumbers: false,
+	},
 	base: '',
 	dest: 'public',
+	head: [
+		[
+			'link',
+			{
+				rel: 'stylesheet',
+				href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons',
+			}
+		],
+		[
+			'link',
+			{
+				rel: 'stylesheet',
+				href: 'https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css',
+			}
+		],
+		[
+			'meta',
+			{
+				name: 'viewport',
+				content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui',
+			}
+		]
+	],
 	plugins: [
-		'@vuepress/plugin-back-to-top',
 		'@vuepress/nprogress',
 		'@vuepress/medium-zoom',
+		'@vuepress/plugin-back-to-top',
+		'@vuepress/plugin-nprogress',
 		'tabs',
 			['mathjax', {
 			target: 'svg',
