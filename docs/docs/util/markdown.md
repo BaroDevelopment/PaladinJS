@@ -363,7 +363,7 @@ A list of all emojis available can be found [here](https://github.com/markdown-i
 <iframe src="YOUR_SLIDE_URL_HERE" frameborder="0" width="740" height="445" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 ```
 ::: tip Using PowerPoint Slides
-![avatar](http://icons.iconarchive.com/icons/carlosjj/microsoft-office-2013/256/PowerPoint-icon.png)
+![avatar](https://icons.iconarchive.com/icons/carlosjj/microsoft-office-2013/256/PowerPoint-icon.png)
 It is also possible to embed a Powerpoint here! Simply upload your PowerPoint file to Google Drive and then open it with Google Slides.
 Finally follow the steps above. 
 
@@ -374,7 +374,48 @@ Keep in mind that you can adjust the __size__ and __duration__ of the slides!
 
 ## PDF using Google PDF Viewer - iframe
 ```html
-<iframe src="http://docs.google.com/gview?url=YOUR_PDF_URL_HERE&embedded=true" style="width:740px; height:445px;" frameborder="0"></iframe>
+<iframe src="https://docs.google.com/gview?url=YOUR_PDF_URL_HERE&embedded=true" style="width:740px; height:445px;" frameborder="0"></iframe>
 ```
 
- <iframe src="http://docs.google.com/gview?url=https://www.markdownguide.org/assets/book/markdown-guide.pdf&embedded=true" style="width:740px; height:445px;" frameborder="0"></iframe>
+ <iframe src="https://docs.google.com/gview?url=https://www.markdownguide.org/assets/book/markdown-guide.pdf&embedded=true" style="width:740px; height:445px;" frameborder="0"></iframe>
+ 
+### Tabs
+We use [vuepress-plugin-tabs](https://github.com/pskordilakis/vuepress-plugin-tabs) plugin
+
+```js
+:::: tabs
+
+::: tab "Tab Title" id="first-tab"
+__markdown content__
+:::
+
+::: tab javascript id="second-tab"
+`
+() => {
+  console.log('JavaScript code example')
+}
+`
+:::
+
+::::
+```
+ 
+:::: tabs
+
+::: tab "Tab Title" id="first-tab"
+__markdown content__
+:::
+
+::: tab javascript id="second-tab"
+```js
+() => {
+  console.log('JavaScript code example')
+}
+```
+:::
+
+::: tab "Disabled Tab" id="third-tab" :is-disabled="true"
+__coming soon__
+:::
+
+::::

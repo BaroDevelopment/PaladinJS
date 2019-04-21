@@ -9,11 +9,14 @@
   "license": "MIT",
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.0",
+    "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.47",
     "@vuepress/plugin-nprogress": "^1.0.0-alpha.47",
     "vuepress": "^1.0.0-alpha.47"
   },
   "dependencies": {
     "semver": "^6.0.0",
-    "vuepress-plugin-mathjax": "^1.2.4"
+    "vue-tabs-component": "^1.5.0",
+    "vuepress-plugin-mathjax": "^1.2.4",
+    "vuepress-plugin-tabs": "^0.2.2"
   }
 }

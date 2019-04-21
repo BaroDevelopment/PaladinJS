@@ -11,8 +11,9 @@ module.exports = {
 	plugins: [
 		'@vuepress/plugin-back-to-top',
 		'@vuepress/nprogress',
-		'vuepress-plugin-export',
-		['mathjax', {
+		'@vuepress/medium-zoom',
+		'tabs',
+			['mathjax', {
 			target: 'svg',
 			presets: [
 				'\\def\\lr#1#2#3{\\left#1#2\\right#3}',
