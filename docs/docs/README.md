@@ -14,6 +14,5 @@ features:
 - title: Logging Bot
   details: Monitor everything in your server!
 footer: Paladin Bot Copyright © 2019
-
 ---
 <PaladinStats/>

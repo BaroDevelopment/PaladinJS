@@ -1,6 +1,14 @@
 ## DiscordJS Utils
 
-#### fetch more than 100 messages
+### Update all dependencies/package.json
+cd to the folder where the `package.json` is and then execute:
+```sh
+npm i -g npm-check-updates
+ncu -u
+npm install
+```
+
+### fetch more than 100 messages
 ```js
 const limit = args.amount && args.amount < 100 ? args.amount : 100;
 let messages = await message.channel.messages.fetch({
@@ -11,7 +19,7 @@ let messages_2 = await message.channel.messages.fetch({ limit: 4, before: messag
 let mergedMessages = messages.concat(messages_2)
 ```
 
-#### Collector
+### Collector
 ```js
   let confirmation = await message.channel.send({
     embed: {

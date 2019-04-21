@@ -1,7 +1,3 @@
----
-layout: <Layout/>
----
-
 ## Welcome 
 Welcome to the official Paladin Documentation
 
