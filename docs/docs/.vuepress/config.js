@@ -9,27 +9,29 @@ module.exports = {
 	base: '',
 	dest: 'public',
 	head: [
+		['link', { rel: 'icon', href: '/favicon.png'}],
+		['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }],
 		[
 			'link',
 			{
 				rel: 'stylesheet',
 				href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons',
-			}
+			},
 		],
 		[
 			'link',
 			{
 				rel: 'stylesheet',
 				href: 'https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css',
-			}
+			},
 		],
 		[
 			'meta',
 			{
 				name: 'viewport',
 				content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui',
-			}
-		]
+			},
+		],
 	],
 	plugins: [
 		'@vuepress/nprogress',
@@ -37,7 +39,7 @@ module.exports = {
 		'@vuepress/plugin-back-to-top',
 		'@vuepress/plugin-nprogress',
 		'tabs',
-			['mathjax', {
+		['mathjax', {
 			target: 'svg',
 			presets: [
 				'\\def\\lr#1#2#3{\\left#1#2\\right#3}',
@@ -48,6 +50,30 @@ module.exports = {
 				'\\R': '\\mathbb{R}',
 				'\\N': '\\mathbb{N}',
 				'\\Q': '\\mathbb{Q}',
+			},
+		}],
+		['container', {
+			type: 'tip',
+			defaultTitle: {
+				'/zh/': '提示',
+			},
+		}],
+		['container', {
+			type: 'warning',
+			defaultTitle: {
+				'/zh/': '注意',
+			},
+		}],
+		['container', {
+			type: 'danger',
+			defaultTitle: {
+				'/zh/': '警告',
+			},
+		}],
+		['container', {
+			type: 'info',
+			defaultTitle: {
+				'/zh/': '警告',
 			},
 		}],
 	],

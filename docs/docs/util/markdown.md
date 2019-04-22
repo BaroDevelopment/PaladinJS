@@ -131,48 +131,6 @@ Right aligned columns
 
 ###### h6
 
-### Embeds
-
-```
-::: tip YINGYANG - Lead Developer & Maintainer
-![avatar](https://cdn.discordapp.com/attachments/396964573007052800/534165823645024296/YingYang.gif)
-Theme components are subject to the same [browser API access restrictions](./markdown.md).
-:::
-
-::: warning Warning
-Theme components `are subject` to the same [browser API access restrictions](./markdown.md).
-:::
-
-::: danger Danger
-Theme components are subject to the same [browser API access restrictions](./markdown.md).
-:::
-
-::: info Info
-Theme components are subject to the same [browser API access restrictions](./README.md).
-:::
-```
-::: tip YINGYANG - Lead Developer & Maintainer
-![avatar](https://cdn.discordapp.com/attachments/396964573007052800/534165823645024296/YingYang.gif)
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
-gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-<em>All inquires about Lorem can be sent to <a href="mailto:zach@mtgjson.com">test@example.com</a></em>
-:::
-
-::: warning Warning
-Theme components `are subject` to the same [browser API access restrictions](./README.md).
-:::
-
-::: danger Danger
-Theme components are subject to the same [browser API access restrictions](./README.md).
-:::
-
-::: info Info
-Theme components are subject to the same [browser API access restrictions](./README.md).
-:::
-
 ### Blockquotes
 ```
 >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 

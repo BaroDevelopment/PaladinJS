@@ -18,7 +18,7 @@ module.exports = {
 		{
 			title: 'Markdown',
 			collapsable: true,
-			children: ['/util/markdown'],
+			children: ['/util/markdown', '/util/markdown/container'],
 		},
 		{
 			title: 'LaTeX',
