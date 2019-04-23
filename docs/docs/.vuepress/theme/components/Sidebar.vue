@@ -1,3 +1,4 @@
+
 <template>
   <aside class="sidebar">
     <NavLinks/>
@@ -16,7 +17,7 @@ export default {
 
   components: { SidebarLinks, NavLinks },
 
-  props: ['items']
+  props: ['items'],
 }
 </script>
 

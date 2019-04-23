@@ -20,16 +20,14 @@
     </div>
 
     <!-- repo link -->
-    <a
-      v-if="repoLink"
-      :href="repoLink"
-      class="repo-link"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+
+<!--    <v-btn v-if="repoLink" color="#303133" class="white&#45;&#45;text repo-link" :href="repoLink" target="_blank" rel="noopener noreferrer">
+      <v-icon left dark>fab fa-github</v-icon>
       {{ repoLabel }}
       <OutboundLink/>
-    </a>
+    </v-btn>-->
+
+    <GitHub v-if="repoLink" :url="repoLink" :height="66" :width="66"/>
   </nav>
 </template>
 
@@ -37,9 +35,10 @@
 import DropdownLink from '@theme/components/DropdownLink.vue'
 import { resolveNavLinkItem } from '../util'
 import NavLink from '@theme/components/NavLink.vue'
+import GitHub from '../../components/GitHub';
 
 export default {
-  components: { NavLink, DropdownLink },
+  components: { GitHub, NavLink, DropdownLink },
 
   computed: {
     userNav () {
@@ -117,6 +116,7 @@ export default {
 
 <style lang="stylus">
 .nav-links
+  margin-right 40px
   display inline-block
   a
     line-height 1.4rem

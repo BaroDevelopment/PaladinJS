@@ -1,6 +1,5 @@
 ## Welcome 
 Welcome to the official Paladin Documentation
-
 ::: tip
 Please keep in mind that you won't be able to do here any configuration. 
 This is the documentation for Paladin Bot and  is currently very incomplete and a work in progress. 

@@ -20,21 +20,21 @@ body
   font-size 16px
   color $textColor
 
-.page
-  padding-left $sidebarWidth
+//.page
+//  padding-left $sidebarWidth
 
 .content:not(.custom)
   @extend $wrapper
   > *:first-child
     margin-top $navbarHeight
-  a:hover
-    text-decoration underline
-  p.demo
-    padding 1rem 1.5rem
-    border 1px solid #ddd
-    border-radius 4px
-  img
-    max-width 100%
+a:hover
+  text-decoration underline
+p.demo
+  padding 1rem 1.5rem
+  border 1px solid #ddd
+  border-radius 4px
+img
+  max-width 100%
 
 .content.custom
   padding 0
@@ -44,7 +44,7 @@ body
 
 a
   font-weight 500
-  color $urlColor
+  //color $urlColor !important
   text-decoration none
 
 p a code
@@ -59,7 +59,7 @@ kbd
   padding 0 0.15em
 
 blockquote
-  font-size 1rem
+  font-size 16px
   color $textColor
   border-left: 0.25rem solid #00caca;
   margin 0.5rem 0
@@ -174,7 +174,6 @@ th, td
 
 .tabs-component-tab-a
   &:hover
-    background-color white
     color $accentColor
     font-weight revert
     a

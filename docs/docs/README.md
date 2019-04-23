@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: Paladin Discord Bot
+heroText: Paladin Bot Docs
 heroImage: https://cdn.discordapp.com/attachments/396964573007052800/492135654919241739/PaladinMainAvatar.png
 tagline: Upgrade your Discord Server today!
 actionText: Get Started →

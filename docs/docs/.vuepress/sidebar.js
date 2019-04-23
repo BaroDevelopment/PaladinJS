@@ -7,26 +7,31 @@ module.exports = {
 		},
 		{
 			title: 'Vuepress',
+			icon: 'fab fa-vuejs',
 			collapsable: true,
 			children: ['/util/vuepress'],
 		},
 		{
 			title: 'Monitoring',
 			collapsable: true,
+			icon: 'fas fa-desktop',
 			children: ['/util/monitoring'],
 		},
 		{
 			title: 'Markdown',
 			collapsable: true,
+			icon: 'fas fa-terminal',
 			children: ['/util/markdown', '/util/markdown/container'],
 		},
 		{
 			title: 'LaTeX',
+			icon: 'fas fa-calculator',
 			collapsable: true,
 			children: ['/util/latex'],
 		},
 		{
 			title: 'Discord.js',
+			icon: 'fab fa-discord',
 			collapsable: true,
 			children: ['/util/discordjs'],
 		},
@@ -36,10 +41,12 @@ module.exports = {
 			title: 'Home',
 			collapsable: false,
 			children: ['/', 'welcome'],
+			icon: 'dashboard'
 		},
 		{
 			title: 'Owner Commands',
 			collapsable: true,
+			icon: 'fas fa-code',
 			children: [
 				'/owner/eval',
 				'/owner/ssh',
@@ -54,6 +61,7 @@ module.exports = {
 		{
 			title: 'Moderation Commands',
 			collapsable: true,
+			icon: 'fas fa-balance-scale',
 			children: [
 				'/moderation/kick',
 				'/moderation/ban',
@@ -65,6 +73,7 @@ module.exports = {
 		{
 			title: 'Misc Commands',
 			collapsable: true,
+			icon: 'fab fa-dashcube',
 			children: [
 				'/misc/json',
 			],
@@ -72,6 +81,7 @@ module.exports = {
 		{
 			title: 'Media Commands',
 			collapsable: true,
+			icon: 'fas fa-images',
 			children: [
 				'/media/belike',
 			],
@@ -79,6 +89,7 @@ module.exports = {
 		{
 			title: 'Search Commands',
 			collapsable: true,
+			icon: 'fas fa-search',
 			children: [
 				'/search/google',
 				'/search/lmgtfy',
@@ -88,6 +99,7 @@ module.exports = {
 		},
 		{
 			title: 'Information Commands',
+			icon: 'fas fa-info-circle',
 			collapsable: true,
 			children: [
 				'/information/help',

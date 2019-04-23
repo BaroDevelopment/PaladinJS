@@ -1,19 +1,24 @@
 ---
 API:
- - name: color
+ - name: type
    type: String
-   parameters: RGB, HEX, primary, success, danger, warning, dark
-   description: Component color
-   default: primary
- - name: closable
-   type: Boolean
-   parameters: null
-   description: With closable button
-   default: false
- - name: icon
+   parameters: info | warning | danger | tip
+   description: The color of the container
+   default: info
+ - name: img
+   type: String
+   parameters: URL | local file
+   description: use ![avatar](URL) for markdown
+   default: null
+ - name: title
    type: String
    parameters: null
-   description: With custom icon
+   description: Title of the container
+   default: ''
+ - name: text
+   type: String
+   parameters:
+   description: Text to display in container body
    default: null
 ---
 
@@ -84,3 +89,5 @@ Theme components are subject to the same [browser API access restrictions](./REA
     title='Info Block'
     text='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
 />
+
+### API

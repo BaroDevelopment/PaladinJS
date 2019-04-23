@@ -11,27 +11,9 @@ module.exports = {
 	head: [
 		['link', { rel: 'icon', href: '/favicon.png'}],
 		['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }],
-		[
-			'link',
-			{
-				rel: 'stylesheet',
-				href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons',
-			},
-		],
-		[
-			'link',
-			{
-				rel: 'stylesheet',
-				href: 'https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css',
-			},
-		],
-		[
-			'meta',
-			{
-				name: 'viewport',
-				content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui',
-			},
-		],
+		['link', {rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css',},],
+		['link', {rel: 'stylesheet',href: 'https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css',},],
+		['meta',{name: 'viewport',content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui',},],
 	],
 	plugins: [
 		'@vuepress/nprogress',

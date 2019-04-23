@@ -1,41 +1,17 @@
-.navbar
-  position fixed
-  z-index 20
-  top 0
-  left 0
-  right 0
-  height $navbarHeight
-  background-color $bg-color
-  box-sizing border-box
-  border-bottom 1px solid $borderColor
-
-  .site-name
-    color desaturate(lighten($accentColor, 10%), 10%) !important
-
-  .links
-    background-color $bg-color !important
-    border-bottom-color: $accentColor
-
-    a
-      &:hover
-      &:active
-      &:active
-      &:focus
-        color: $accentColor
-
-
 .search-box
   input
+    //width: 300px !important
     border-color desaturate(lighten($bg-color, 30%), 30%) !important
     background-color #2a2a2a !important
     color desaturate(lighten($accentColor, 20%), 20%) !important
-
+    margin-right 20px
     &.focused
       border-color: $accentColor !important
 
   .suggestions
     background-color desaturate(lighten($bg-color, 15%), 10%) !important
     border 0 !important
+    font-size 14px
 
   .suggestion
     background-color: desaturate(lighten($bg-color, 15%), 10%) !important

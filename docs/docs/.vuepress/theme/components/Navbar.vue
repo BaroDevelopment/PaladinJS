@@ -1,128 +1,117 @@
 <template>
-  <header class="navbar">
-    <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
+    <header class="navbar">
+        <v-toolbar app flat>
+            <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+            <v-toolbar-title class="text-uppercase">
+                <span class="font-weight-light">Paladin</span>
+                <span>Docs</span>
+            </v-toolbar-title>
+            <v-spacer></v-spacer>
+            <div class="links" :style="linksWrapMaxWidth ? {'max-width': linksWrapMaxWidth + 'px'} : {}">
+                <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia"/>
+                <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
+                <NavLinks class="can-hide"/>
+            </div>
+        </v-toolbar>
+        <v-navigation-drawer
+                class="nav-drawer"
+                v-model="drawer"
+                fixed
+                temporary
+                color="red"
+                app
+        >
+            <v-layout column align-center>
+                <v-flex class="mt-3">
+                    <v-avatar size="90">
+                        <img class="text-lg-center"
+                             src="https://cdn.discordapp.com/attachments/396964573007052800/492135654919241739/PaladinMainAvatar.png">
+                    </v-avatar>
+                    <p class="white--text subheading mt-2">Paladin Bot</p>
+                </v-flex>
+            </v-layout>
 
-    <router-link
-      :to="$localePath"
-      class="home-link"
-    >
-      <img
-        class="logo"
-        v-if="$site.themeConfig.logo"
-        :src="$withBase($site.themeConfig.logo)"
-        :alt="$siteTitle"
-      >
-      <span
-        ref="siteName"
-        class="site-name"
-        v-if="$siteTitle"
-        :class="{ 'can-hide': $site.themeConfig.logo }"
-      >{{ $siteTitle }}</span>
-    </router-link>
+            <v-divider/>
 
-    <div
-      class="links"
-      :style="linksWrapMaxWidth ? {
-        'max-width': linksWrapMaxWidth + 'px'
-      } : {}"
-    >
-      <AlgoliaSearchBox
-        v-if="isAlgoliaSearch"
-        :options="algolia"
-      />
-      <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
-      <NavLinks class="can-hide"/>
-    </div>
-  </header>
+
+            <v-list>
+                <template v-for="item in sidebarItems">
+                    <v-list-group>
+                        <template v-slot:activator>
+                            <v-list-tile>
+                                <v-list-tile-action v-if="item.icon">
+                                    <v-icon>{{ item.icon }}</v-icon>
+                                </v-list-tile-action>
+                                <v-list-tile-title>
+                                    {{ item.title }}
+                                </v-list-tile-title>
+                            </v-list-tile>
+                        </template>
+                        <v-list-tile v-for="(child, i) in item.children" :key="i" @click="" router
+                                     :to="child.regularPath">
+                            <v-list-tile-title class="sidebar-child-entry">{{child.title}}</v-list-tile-title>
+                        </v-list-tile>
+                    </v-list-group>
+                </template>
+            </v-list>
+        </v-navigation-drawer>
+    </header>
 </template>
 
 <script>
-import AlgoliaSearchBox from '@AlgoliaSearchBox'
-import SearchBox from '@SearchBox'
-import SidebarButton from '@theme/components/SidebarButton.vue'
-import NavLinks from '@theme/components/NavLinks.vue'
+	import AlgoliaSearchBox from '@AlgoliaSearchBox';
+	import SearchBox from '@SearchBox';
+	import SidebarButton from '@theme/components/SidebarButton.vue';
+	import NavLinks from '@theme/components/NavLinks.vue';
+	import { resolveSidebarItems } from '../util';
 
-export default {
-  components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox },
 
-  data () {
-    return {
-      linksWrapMaxWidth: null
-    }
-  },
+	export default {
+		components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox },
 
-  mounted () {
-    const MOBILE_DESKTOP_BREAKPOINT = 719 // refer to config.styl
-    const NAVBAR_VERTICAL_PADDING = parseInt(css(this.$el, 'paddingLeft')) + parseInt(css(this.$el, 'paddingRight'))
-    const handleLinksWrapWidth = () => {
-      if (document.documentElement.clientWidth < MOBILE_DESKTOP_BREAKPOINT) {
-        this.linksWrapMaxWidth = null
-      } else {
-        this.linksWrapMaxWidth = this.$el.offsetWidth - NAVBAR_VERTICAL_PADDING
-          - (this.$refs.siteName && this.$refs.siteName.offsetWidth || 0)
-      }
-    }
-    handleLinksWrapWidth()
-    window.addEventListener('resize', handleLinksWrapWidth, false)
-  },
+		data() {
+			return {
+				drawer: false,
+				linksWrapMaxWidth: null,
+			};
+		},
+		computed: {
+			algolia() {
+				return this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {};
+			},
 
-  computed: {
-    algolia () {
-      return this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {}
-    },
-
-    isAlgoliaSearch () {
-      return this.algolia && this.algolia.apiKey && this.algolia.indexName
-    }
-  }
-}
-
-function css (el, property) {
-  // NOTE: Known bug, will return 'auto' if style value is 'auto'
-  const win = el.ownerDocument.defaultView
-  // null means not to return pseudo styles
-  return win.getComputedStyle(el, null)[property]
-}
+			isAlgoliaSearch() {
+				return this.algolia && this.algolia.apiKey && this.algolia.indexName;
+			},
+			sidebarItems() {
+				return resolveSidebarItems(
+					this.$page,
+					this.$page.regularPath,
+					this.$site,
+					this.$localePath,
+				);
+			},
+		},
+		mounted() {
+			console.log(this.sidebarItems);
+		},
+	};
 </script>
 
-<style lang="stylus">
-$navbar-vertical-padding = 0.7rem
-$navbar-horizontal-padding = 1.5rem
+<style lang="stylus" scoped>
+    .nav-drawer
+        background-color: #212121 !important
 
-.navbar
-  padding $navbar-vertical-padding $navbar-horizontal-padding
-  line-height $navbarHeight - 1.4rem
-  a, span, img
-    display inline-block
-  .logo
-    height $navbarHeight - 1.4rem
-    min-width $navbarHeight - 1.4rem
-    margin-right 0.8rem
-    vertical-align top
-  .site-name
-    font-size 1.3rem
-    font-weight 600
-    color $textColor
-    position relative
-  .links
-    padding-left 1.5rem
-    box-sizing border-box
-    background-color white
-    white-space nowrap
-    font-size 0.9rem
-    position absolute
-    right $navbar-horizontal-padding
-    top $navbar-vertical-padding
-    display flex
-    .search-box
-      flex: 0 0 auto
-      vertical-align top
+    .sidebar-child-entry
+        text-align center !important
 
-@media (max-width: $MQMobile)
-  .navbar
-    padding-left 4rem
-    .can-hide
-      display none
-    .links
-      padding-left 1.5rem
+    @media (max-width: ($MQMobile + 90px))
+        .navbar
+            padding-left 4rem
+
+            .can-hide
+                display none
+
+            .links
+                padding-left 1.5rem
 </style>
