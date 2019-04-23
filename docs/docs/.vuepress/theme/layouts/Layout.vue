@@ -47,6 +47,7 @@
                 />
             </Page>
         </div>
+        <Footer/>
     </v-app>
 </template>
 
@@ -56,9 +57,10 @@
 	import Page from '@theme/components/Page.vue';
 	import Sidebar from '@theme/components/Sidebar.vue';
 	import { resolveSidebarItems } from '../util';
+	import Footer from '../../../../../PaladinVue/components/Footer';
 
 	export default {
-		components: { Home, Page, Sidebar, Navbar },
+		components: { Footer, Home, Page, Sidebar, Navbar },
 
 		data() {
 			return {

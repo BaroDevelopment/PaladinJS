@@ -3,7 +3,6 @@
         <slot name="top"/>
 
         <Content/>
-
         <footer class="page-edit">
             <div class="edit-link" v-if="editLink">
                 <a :href="editLink" target="_blank" rel="noopener noreferrer">{{ editLinkText }}</a>
@@ -15,7 +14,6 @@
                 <span class="time">{{ lastUpdated }}</span>
             </div>
         </footer>
-
         <div class="page-nav" v-if="prev || next">
             <p class="inner">
                 <span v-if="prev" class="prev">
@@ -32,7 +30,6 @@
                 </span>
             </p>
         </div>
-
         <slot name="bottom"/>
     </main>
 </template>
@@ -41,6 +38,7 @@
 	import { resolvePage, outboundRE, endingSlashRE } from '../util';
 
 	export default {
+		components: {  },
 		props: ['sidebarItems'],
 
 		computed: {
