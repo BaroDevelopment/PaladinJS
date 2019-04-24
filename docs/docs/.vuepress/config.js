@@ -67,6 +67,14 @@ module.exports = {
 				'/zh/': '警告',
 			},
 		}],
+		['container', {
+			type: 'vue',
+			before: '<pre class="vue-container"><code>',
+			after: '</code></pre>',
+			defaultTitle: {
+				'/zh/': '警告',
+			},
+		}],
 	],
 	themeConfig: {
 		repo: 'SenaxDev/PaladinJS',

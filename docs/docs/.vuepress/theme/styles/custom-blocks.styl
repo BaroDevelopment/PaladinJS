@@ -3,16 +3,36 @@ $warningYellow = #ffe564;
 $dangerRed = #ff3331;
 $infoBlue = #00b3ff;
 
+pre.vue-container
+  border-left-width: .5rem;
+  border-left-style: solid;
+  border-color: #42b983;
+  border-radius: 0px;
+  & > code
+    font-size: 14px !important;
+    & > p
+      margin: -5px 0 -20px 0;
+    code
+      background-color: #42b983 !important;
+      margin: 3px 5px;
+      border-radius: 3px;
+      color #000
+    em
+      color #808080
+      font-weight light
+
+
 .custom-block
   .custom-block-title
     font-weight 600
-    margin-top 10px
     margin-bottom 7px
   &.tip, &.warning, &.danger, &.info
     padding .1rem 1.5rem
     border-left-width .5rem
     border-left-style solid
     margin 1rem 0
+    p
+      margin-top 16px !important
   &.tip
     color: lighten($tipGreen, 50%);
     background-color: alpha($tipGreen, 0.15)
