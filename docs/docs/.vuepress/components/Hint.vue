@@ -57,32 +57,31 @@
     .custom-block
         .custom-block-title
             font-weight 600
-            margin-bottom -0.4rem
+            margin-top 10px
+            margin-bottom 7px
         &.tip, &.warning, &.danger, &.info
             padding .1rem 1.5rem
-            border-left-width .35rem
+            border-left-width .5rem
             border-left-style solid
             margin 1rem 0
         &.tip
             color: lighten($tipGreen, 50%);
-            background-color: alpha($tipGreen, 0.25)
+            background-color: alpha($tipGreen, 0.15)
             border-color $tipGreen
-
             .custom-block-title
                 color: lighten($tipGreen, 20%);
             a
                 color darken($tipGreen, 20%);
         &.info
-            color: lighten($infoBlue, 50%);
-            background-color: alpha($infoBlue, 0.25)
+            color: lighten($infoBlue, 50%)
+            background-color: alpha($infoBlue, 0.20) !important
             border-color $infoBlue
-
             .custom-block-title
                 color: lighten($infoBlue, 20%);
             a
                 color darken($infoBlue, 20%);
         &.warning
-            background-color: alpha($warningYellow, 0.25)
+            background-color: alpha($warningYellow, 0.2) !important
             border-color darken($warningYellow, 35%)
             color: lighten($warningYellow, 40%);
             .custom-block-title
@@ -90,14 +89,14 @@
             a
                 color darken($warningYellow, 20%);
         &.danger
-            background-color: alpha($dangerRed, 0.25)
+            background-color: desaturate(darken($dangerRed, 60%), 70%)
             border-color darken($dangerRed, 20%)
             color: lighten($dangerRed, 50%);
-
             .custom-block-title
-                color: lighten($dangerRed, 5%);
+                color: darken($dangerRed, 5%);
             a
                 color: darken($dangerRed, 5%);
+
 
     @media (max-width: $MQMobile)
         .custom-block
