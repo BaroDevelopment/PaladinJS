@@ -8,8 +8,8 @@
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <div class="links" :style="linksWrapMaxWidth ? {'max-width': linksWrapMaxWidth + 'px'} : {}">
-                <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia"/>
-                <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
+                <!--<AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia"/>-->
+                <!--<SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>-->
                 <NavLinks class="can-hide"/>
             </div>
         </v-toolbar>
@@ -17,7 +17,6 @@
                 class="nav-drawer"
                 v-model="drawer"
                 fixed
-                temporary
                 color="red"
                 app
         >
@@ -29,30 +28,36 @@
                     </v-avatar>
                     <p class="white--text subheading mt-2">Paladin Bot</p>
                 </v-flex>
+                <div class="links" :style="linksWrapMaxWidth ? {'max-width': linksWrapMaxWidth + 'px'} : {}">
+                    <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia"/>
+                    <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
+                </div>
             </v-layout>
-
             <v-divider/>
 
 
-            <v-list>
-                <template v-for="item in sidebarItems">
-                    <v-list-group>
-                        <template v-slot:activator>
-                            <v-list-tile>
-                                <v-list-tile-action v-if="item.icon">
-                                    <v-icon>{{ item.icon }}</v-icon>
-                                </v-list-tile-action>
-                                <v-list-tile-title>
-                                    {{ item.title }}
-                                </v-list-tile-title>
-                            </v-list-tile>
-                        </template>
-                        <v-list-tile v-for="(child, i) in item.children" :key="i" @click="" router
-                                     :to="child.regularPath">
-                            <v-list-tile-title class="sidebar-child-entry">{{child.title}}</v-list-tile-title>
+            <v-list v-for="item in sidebarItems">
+                <v-list-group
+                        :prepend-icon="item.icon"
+                        value="false"
+                >
+                    <template v-slot:activator>
+                        <v-list-tile>
+                            <v-list-tile-title>{{item.title}}</v-list-tile-title>
                         </v-list-tile>
-                    </v-list-group>
-                </template>
+                    </template>
+                    <v-list-tile
+                            v-for="(child, i) in item.children"
+                            :key="i" @click=""
+                            :to="child.regularPath"
+                            router
+                    >
+                        <v-list-tile-action>
+                            <v-icon></v-icon>
+                        </v-list-tile-action>
+                        <v-list-tile-title>{{child.title}}</v-list-tile-title>
+                    </v-list-tile>
+                </v-list-group>
             </v-list>
         </v-navigation-drawer>
     </header>
@@ -60,7 +65,7 @@
 
 <script>
 	import AlgoliaSearchBox from '@AlgoliaSearchBox';
-	import SearchBox from '@SearchBox';
+	import SearchBox from '@theme/components/SearchBox.vue';
 	import SidebarButton from '@theme/components/SidebarButton.vue';
 	import NavLinks from '@theme/components/NavLinks.vue';
 	import { resolveSidebarItems } from '../util';
@@ -101,9 +106,6 @@
 <style lang="stylus" scoped>
     .nav-drawer
         background-color: #212121 !important
-
-    .sidebar-child-entry
-        text-align center !important
 
     @media (max-width: ($MQMobile + 90px))
         .navbar

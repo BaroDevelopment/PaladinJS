@@ -1,8 +1,8 @@
 <template>
     <main class="page">
         <slot name="top"/>
-
         <Content/>
+        <Test/>
         <footer class="page-edit">
             <div class="edit-link" v-if="editLink">
                 <a :href="editLink" target="_blank" rel="noopener noreferrer">{{ editLinkText }}</a>
@@ -36,9 +36,10 @@
 
 <script>
 	import { resolvePage, outboundRE, endingSlashRE } from '../util';
+	import Test from '../../components/Test.vue'
 
 	export default {
-		components: {  },
+		components: { Test },
 		props: ['sidebarItems'],
 
 		computed: {

@@ -46,7 +46,7 @@ module.exports = {
 		{
 			title: 'Owner Commands',
 			collapsable: true,
-			icon: 'fas fa-code',
+			icon: 'code',
 			children: [
 				'/owner/eval',
 				'/owner/ssh',
@@ -61,7 +61,7 @@ module.exports = {
 		{
 			title: 'Moderation Commands',
 			collapsable: true,
-			icon: 'fas fa-balance-scale',
+			icon: 'gavel',
 			children: [
 				'/moderation/kick',
 				'/moderation/ban',
@@ -73,7 +73,7 @@ module.exports = {
 		{
 			title: 'Misc Commands',
 			collapsable: true,
-			icon: 'fab fa-dashcube',
+			icon: 'table_chart',
 			children: [
 				'/misc/json',
 			],
@@ -81,7 +81,7 @@ module.exports = {
 		{
 			title: 'Media Commands',
 			collapsable: true,
-			icon: 'fas fa-images',
+			icon: 'camera',
 			children: [
 				'/media/belike',
 			],
@@ -89,7 +89,7 @@ module.exports = {
 		{
 			title: 'Search Commands',
 			collapsable: true,
-			icon: 'fas fa-search',
+			icon: 'search',
 			children: [
 				'/search/google',
 				'/search/lmgtfy',
@@ -99,7 +99,7 @@ module.exports = {
 		},
 		{
 			title: 'Information Commands',
-			icon: 'fas fa-info-circle',
+			icon: 'info',
 			collapsable: true,
 			children: [
 				'/information/help',
