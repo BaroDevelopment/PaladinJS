@@ -1,25 +1,7 @@
 <template>
 
-    <!--
-            item-text="title"
-            item-value="symbol"
-            chips
-            solo
-            hide-selected
-    -->
 
-
-    <v-autocomplete
-            v-model="query"
-            :items="suggestions"
-            :loading="false"
-            :search-input.sync="suggestions"
-            clearable
-            hide-details
-            label="Search ..."
-    ></v-autocomplete>
-
-<!--            <v-text-field
+    <!--            <v-text-field
                 v-model="query"
                 outline
                 clearable
@@ -48,9 +30,6 @@
                 </v-fade-transition>
             </template>
         </v-text-field>-->
-
-
-
 
 
     <!--        <div class="search-box">
@@ -88,6 +67,33 @@
                 </ul>
             </div>-->
 
+
+    <!--
+        solo
+
+-->
+
+    <v-autocomplete
+            v-model="model"
+            :items="items"
+            :loading="loading"
+            :search-input.sync="query"
+            item-text="title"
+            item-value="path"
+            clearable
+            label="Search"
+            auto-select-first
+            color="light-blue accent-3"
+            dark
+            dense
+            hide-no-data
+            hide-selected
+            class="search-box"
+            append-icon="search"
+            success-messages
+            height="20px"
+    ></v-autocomplete>
+
 </template>
 
 <script>
@@ -95,11 +101,23 @@
 	export default {
 		data() {
 			return {
-				query: '',
+				query: null,
 				focused: false,
 				focusIndex: 0,
 				loading: false,
+				model: null,
+				items: [],
 			};
+		},
+		watch: {
+			query(newVal) {
+				console.log(this.items)
+				if (!newVal || newVal.length <= 0) {
+					this.items = [];
+					return;
+				}
+				this.suggestions();
+			},
 		},
 		computed: {
 			showSuggestions() {
@@ -109,9 +127,16 @@
 					&& this.suggestions.length
 				);
 			},
+			// make suggestions align right when there are not enough items
+			alignRight() {
+				const navCount = (this.$site.themeConfig.nav || []).length;
+				const repo = this.$site.repo ? 1 : 0;
+				return navCount + repo <= 2;
+			},
+		},
+		methods: {
 			suggestions() {
-				console.log('Suggestions ...');
-				console.log('Query', this.query);
+				this.loading = true
 				const query = this.query.trim().toLowerCase();
 				if (!query) {
 					return;
@@ -151,17 +176,19 @@
 						}
 					}
 				}
-				console.log(res);
-				return res;
+				this.loading = false
+				this.items = res
+                const route = this.items.filter(e => e.title ===  this.query)
+				console.log('Contains: ', route)
+				if (route.length > 0){
+					console.log('Redirecting now to .... ', route)
+					console.log(window.location.href + route[0].path)
+
+					this.$router.push(route[0].path)
+					// window.location.href = window.location.href + route.path
+				}
+				// return;
 			},
-			// make suggestions align right when there are not enough items
-			alignRight() {
-				const navCount = (this.$site.themeConfig.nav || []).length;
-				const repo = this.$site.repo ? 1 : 0;
-				return navCount + repo <= 2;
-			},
-		},
-		methods: {
 			getPageLocalePath(page) {
 				for (const localePath in this.$site.locales || {}) {
 					if (localePath !== '/' && page.path.indexOf(localePath) === 0) {
@@ -223,102 +250,8 @@
     .search-box
         display inline-block
         position relative
-        margin-right 1rem
+        padding-top 30px
 
         input
-            cursor text
             width 10rem
-            height: 2rem
-            color lighten($textColor, 25%)
-            display inline-block
-            border 1px solid darken($borderColor, 10%)
-            border-radius 2rem
-            font-size 0.9rem
-            line-height 2rem
-            padding 0 0.5rem 0 2rem
-            outline none
-            transition all .2s ease
-            background #fff 'search' 0.6rem 0.5rem no-repeat
-            background-size 1rem
-
-            &:focus
-                cursor auto
-                border-color $accentColor
-
-        .suggestions
-            background #fff
-            width 20rem
-            position absolute
-            top 1.5rem
-            border 1px solid darken($borderColor, 10%)
-            border-radius 6px
-            padding 0.4rem
-            list-style-type none
-
-            &.align-right
-                right 0
-
-        .suggestion
-            line-height 1.4
-            padding 0.4rem 0.6rem
-            border-radius 4px
-            cursor pointer
-
-            a
-                white-space normal
-                color lighten($textColor, 35%)
-
-                .page-title
-                    font-weight 600
-
-                .header
-                    font-size 0.9em
-                    margin-left 0.25em
-
-            &.focused
-                background-color #f3f4f5
-
-                a
-                    color $accentColor
-
-    @media (max-width: $MQNarrow)
-        .search-box
-            input
-                cursor pointer
-                width 0
-                border-color transparent
-                position relative
-
-                &:focus
-                    cursor text
-                    left 0
-                    width 10rem
-
-    // Match IE11
-    @media all and (-ms-high-contrast: none)
-        .search-box input
-            height 2rem
-
-    @media (max-width: $MQNarrow) and (min-width: $MQMobile)
-        .search-box
-            .suggestions
-                left 0
-
-    @media (max-width: $MQMobile)
-        .search-box
-            margin-right 0
-
-            input
-                left 1rem
-
-            .suggestions
-                right 0
-
-    @media (max-width: $MQMobileNarrow)
-        .search-box
-            .suggestions
-                width calc(100vw - 4rem)
-
-            input:focus
-                width 8rem
 </style>

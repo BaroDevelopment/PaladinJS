@@ -57,7 +57,7 @@
 	import Page from '@theme/components/Page.vue';
 	import Sidebar from '@theme/components/Sidebar.vue';
 	import { resolveSidebarItems } from '../util';
-	import Footer from '../../../../../PaladinVue/components/Footer';
+	import Footer from '@theme/components/Footer';
 
 	export default {
 		components: { Footer, Home, Page, Sidebar, Navbar },

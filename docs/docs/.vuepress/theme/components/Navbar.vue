@@ -2,25 +2,24 @@
     <header class="navbar">
         <v-toolbar app flat>
             <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-            <v-toolbar-title class="text-uppercase">
+            <v-toolbar-title class="text-uppercase headerTitle">
                 <span class="font-weight-light">Paladin</span>
                 <span>Docs</span>
             </v-toolbar-title>
             <v-spacer></v-spacer>
+            <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia"/>
+            <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
+            <v-spacer></v-spacer>
             <div class="links" :style="linksWrapMaxWidth ? {'max-width': linksWrapMaxWidth + 'px'} : {}">
-                <!--<AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia"/>-->
-                <!--<SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>-->
                 <NavLinks class="can-hide"/>
             </div>
         </v-toolbar>
         <v-navigation-drawer
-                class="nav-drawer"
                 v-model="drawer"
                 fixed
-                color="red"
                 app
         >
-            <v-layout column align-center>
+            <v-layout column align-center class="nav-drawer">
                 <v-flex class="mt-3">
                     <v-avatar size="90">
                         <img class="text-lg-center"
@@ -36,7 +35,7 @@
             <v-divider/>
 
 
-            <v-list v-for="item in sidebarItems">
+            <v-list v-for="item in sidebarItems" class="drawerListEntries">
                 <v-list-group
                         :prepend-icon="item.icon"
                         value="false"
@@ -97,17 +96,16 @@
 				);
 			},
 		},
-		mounted() {
-			console.log(this.sidebarItems);
-		},
 	};
 </script>
 
 <style lang="stylus" scoped>
     .nav-drawer
         background-color: #212121 !important
+    .drawerListEntries
+        background-color: #313131 !important
 
-    @media (max-width: ($MQMobile + 90px))
+    @media (max-width: $MQMobile)
         .navbar
             padding-left 4rem
 
@@ -116,4 +114,8 @@
 
             .links
                 padding-left 1.5rem
+
+    @media (max-width: $MQMobile)
+        .headerTitle
+            display none
 </style>
