@@ -179,7 +179,6 @@
 				this.loading = false
 				this.items = res
                 const route = this.items.filter(e => e.title ===  this.query)
-				console.log('Contains: ', route)
 				if (route.length > 0){
 					console.log('Redirecting now to .... ', route)
 					console.log(window.location.href + route[0].path)

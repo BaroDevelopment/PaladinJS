@@ -1,6 +1,6 @@
 const sidebar = require('./sidebar.js');
 
-module.exports = {
+const config = {
 	title: 'Paladin Documentation',
 	description: 'A Multipurpose Premium Discord Bot with unique features.',
 	markdown: {
@@ -9,12 +9,15 @@ module.exports = {
 	base: '',
 	dest: 'public',
 	head: [
-		['link', { rel: 'icon', href: '/favicon.png'}],
+		['link', { rel: 'icon', href: '/favicon.png' }],
 		['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }],
-		['link', {rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css',},],
-		['link', {rel: 'stylesheet',href: 'https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css',},],
-		['meta',{name: 'viewport',content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui',},],
-		['script',{src: 'https://cdn.jsdelivr.net/npm/@widgetbot/crate@3', async: true, defer: true}, `
+		['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css' }],
+		['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css' }],
+		['meta', {
+			name: 'viewport',
+			content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui',
+		}],
+		['script', { src: 'https://cdn.jsdelivr.net/npm/@widgetbot/crate@3', async: true, defer: true }, `
 			const button = new Crate({
 			location: ['bottom', 'right'],
 			server: '393207704211947521',
@@ -101,3 +104,12 @@ module.exports = {
 		sidebar,
 	},
 };
+
+if (process.env.NODE_ENV === 'production') {
+	config.themeConfig.algolia = {
+		apiKey: '9923ebe5f42cc67f0904b3ea6e5cd718',
+		indexName: 'paladinbot',
+	};
+}
+
+module.exports = config;
