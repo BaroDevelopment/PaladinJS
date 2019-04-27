@@ -87,6 +87,10 @@ const config = {
 		lastUpdated: true,
 		displayAllHeaders: true,
 		logo: 'https://cdn.discordapp.com/attachments/396964573007052800/492135654919241739/PaladinMainAvatar.png',
+		algolia: {
+			apiKey: '9923ebe5f42cc67f0904b3ea6e5cd718',
+			indexName: 'paladinbot',
+		},
 		nav: [
 			{
 				text: 'Home',
@@ -104,12 +108,5 @@ const config = {
 		sidebar,
 	},
 };
-
-if (process.env.NODE_ENV === 'production') {
-	config.themeConfig.algolia = {
-		apiKey: '9923ebe5f42cc67f0904b3ea6e5cd718',
-		indexName: 'paladinbot',
-	};
-}
 
 module.exports = config;

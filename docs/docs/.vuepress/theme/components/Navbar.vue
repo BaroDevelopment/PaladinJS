@@ -27,13 +27,9 @@
                     </v-avatar>
                     <p class="white--text subheading mt-2">Paladin Bot</p>
                 </v-flex>
-                <div class="links" :style="linksWrapMaxWidth ? {'max-width': linksWrapMaxWidth + 'px'} : {}">
-                    <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia"/>
-                    <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
-                </div>
+                <SearchBox v-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
             </v-layout>
             <v-divider/>
-
 
             <v-list v-for="item in sidebarItems" class="drawerListEntries">
                 <v-list-group
@@ -85,7 +81,6 @@
 			},
 
 			isAlgoliaSearch() {
-				console.log(this.algolia && this.algolia.apiKey && this.algolia.indexName)
 				return this.algolia && this.algolia.apiKey && this.algolia.indexName;
 			},
 			sidebarItems() {
@@ -103,6 +98,7 @@
 <style lang="stylus" scoped>
     .nav-drawer
         background-color: #212121 !important
+
     .drawerListEntries
         background-color: #313131 !important
 

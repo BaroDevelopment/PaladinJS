@@ -111,7 +111,6 @@
 		},
 		watch: {
 			query(newVal) {
-				console.log(this.items)
 				if (!newVal || newVal.length <= 0) {
 					this.items = [];
 					return;
@@ -245,7 +244,7 @@
 	};
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
     .search-box
         display inline-block
         position relative
