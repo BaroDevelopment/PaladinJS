@@ -1,6 +1,6 @@
 <template>
     <div :class="['admonition', type]">
-        <v-expansion-panel dark value="true">
+        <v-expansion-panel dark>
             <v-expansion-panel-content class="admonitionContainer">
                 <template v-slot:actions>
                     <v-icon>{{items[type]['icon']}}</v-icon>

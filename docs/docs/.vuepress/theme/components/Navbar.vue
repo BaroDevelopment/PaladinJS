@@ -8,7 +8,7 @@
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia"/>
-            <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
+            <!--<SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>-->
             <v-spacer></v-spacer>
             <div class="links" :style="linksWrapMaxWidth ? {'max-width': linksWrapMaxWidth + 'px'} : {}">
                 <NavLinks class="can-hide"/>
@@ -27,7 +27,7 @@
                     </v-avatar>
                     <p class="white--text subheading mt-2">Paladin Bot</p>
                 </v-flex>
-                <SearchBox v-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
+                <!--<SearchBox v-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>-->
             </v-layout>
             <v-divider/>
 
@@ -60,7 +60,7 @@
 
 <script>
 	import AlgoliaSearchBox from '@AlgoliaSearchBox';
-	import SearchBox from '@theme/components/SearchBox.vue';
+	import SearchBox from '@SearchBox';
 	import SidebarButton from '@theme/components/SidebarButton.vue';
 	import NavLinks from '@theme/components/NavLinks.vue';
 	import { resolveSidebarItems } from '../util';
