@@ -1,6 +1,6 @@
 <template>
     <div :class="['admonition', type]">
-        <v-expansion-panel dark>
+        <v-expansion-panel dark expand :value="expand">
             <v-expansion-panel-content class="admonitionContainer">
                 <template v-slot:actions>
                     <v-icon>{{items[type]['icon']}}</v-icon>
@@ -53,14 +53,20 @@
 				type: String,
 				required: true,
 			},
+            expand:{
+				type: Number,
+                default: 0,
+            },
 			title: {
 				type: String,
 				required: true,
 			},
 		},
-		mounted() {
-			console.log(this.items[this.type]);
-		},
+        computed:{
+			expandable(){
+				return this.expand ? [true] : [false]
+            }
+        }
 	};
 </script>
 
