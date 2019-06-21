@@ -19,8 +19,10 @@ body
   font-size 16px
   color $textColor
 
-//.page
-//  padding-left $sidebarWidth
+.page
+  //padding-left $sidebarWidth + 10
+  //padding-right $sidebarWidth + 10
+  padding-top 80px
 
 .content:not(.custom)
   @extend $wrapper
@@ -47,8 +49,6 @@ a
 p a code
   font-weight 400
   color $accentColor
-
-
 
 kbd
   background #eee
@@ -193,7 +193,6 @@ mjx-container[jax="SVG"] > svg
   .theme-container.no-sidebar
     .sidebar
       display none
-    .page
-      padding-left 0
+
 
 @require 'mobile.styl'

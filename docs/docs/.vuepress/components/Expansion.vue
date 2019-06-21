@@ -1,5 +1,5 @@
 <template>
-    <v-expansion-panel>
+    <v-expansion-panel expand>
         <v-expansion-panel-content>
             <template v-slot:actions>
                 <v-icon color="primary">fas fa-code</v-icon>
@@ -32,9 +32,6 @@
             }
         },
 		components: {},
-        mounted() {
-			console.log()
-		}
 	};
 </script>
 

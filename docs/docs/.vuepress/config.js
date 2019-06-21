@@ -6,11 +6,11 @@ const config = {
 	markdown: {
 		lineNumbers: false,
 	},
-	base: '',
+	base: '/docs/',
 	dest: 'public',
 	head: [
 		['link', { rel: 'icon', href: '/favicon.png' }],
-		['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }],
+		['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' }],
 		['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css' }],
 		['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css' }],
 		['meta', {
@@ -20,9 +20,9 @@ const config = {
 		['script', { src: 'https://cdn.jsdelivr.net/npm/@widgetbot/crate@3', async: true, defer: true }, `
 			const button = new Crate({
 			location: ['bottom', 'right'],
-			server: '393207704211947521',
-			channel: '441694036785627157',
-			shard: 'https://cl3.widgetbot.io'
+			server: '391946504509587476',
+			channel: '501484507585708038',
+			shard: 'https://disweb.deploys.io'
 			})
 			button.notify('Need a hand? Leave a message!')
 		`],
@@ -80,7 +80,7 @@ const config = {
 		}],
 	],
 	themeConfig: {
-		repo: 'SenaxDev/PaladinJS',
+		repo: 'BaroDevelopment/PaladinJS',
 		docsDir: 'docs/docs/',
 		editLinks: true,
 		sidebarDepth: 0,
@@ -101,8 +101,8 @@ const config = {
 				link: '/welcome',
 			},
 			{
-				text: 'Util',
-				link: '/util/',
+				text: 'VuePress',
+				link: '/usage/',
 			},
 		],
 		sidebar,

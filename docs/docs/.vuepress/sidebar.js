@@ -1,5 +1,5 @@
 module.exports = {
-	'/util/': [
+	'/usage/': [
 		{
 			title: 'Home',
 			collapsable: false,
@@ -9,31 +9,25 @@ module.exports = {
 			title: 'Vuepress',
 			icon: 'fab fa-vuejs',
 			collapsable: true,
-			children: ['/util/vuepress'],
+			children: [
+				'/usage/vuepress',
+				'/usage/markdown',
+				'/usage/cards',
+				'/usage/container',
+				'/usage/latex'
+			],
+		},
+		{
+			title: 'Javascript',
+			icon: 'fab fa-discord',
+			collapsable: true,
+			children: ['/usage/discordjs/'],
 		},
 		{
 			title: 'Monitoring',
 			collapsable: true,
 			icon: 'fas fa-desktop',
-			children: ['/util/monitoring'],
-		},
-		{
-			title: 'Markdown',
-			collapsable: true,
-			icon: 'fas fa-terminal',
-			children: ['/util/markdown', '/util/markdown/container'],
-		},
-		{
-			title: 'LaTeX',
-			icon: 'fas fa-calculator',
-			collapsable: true,
-			children: ['/util/latex'],
-		},
-		{
-			title: 'Discord.js',
-			icon: 'fab fa-discord',
-			collapsable: true,
-			children: ['/util/discordjs'],
+			children: ['/usage/monitoring'],
 		},
 	],
 	'/': [

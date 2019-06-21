@@ -1,52 +1,58 @@
 <template>
     <v-app dark>
-        <div
-                class="theme-container"
-                :class="pageClasses"
-                @touchstart="onTouchStart"
-                @touchend="onTouchEnd"
-        >
-            <Navbar
-                    v-if="shouldShowNavbar"
-                    @toggle-sidebar="toggleSidebar"
-            />
+        <v-container>
+            <v-layout align-center justify-center row wrap>
+                <v-flex xs10 sm10 md10 lg9 xl8>
+                    <div
+                            class="theme-container"
+                            :class="pageClasses"
+                            @touchstart="onTouchStart"
+                            @touchend="onTouchEnd"
+                    >
+                        <Navbar
+                                v-if="shouldShowNavbar"
+                                @toggle-sidebar="toggleSidebar"
+                        />
 
-            <div
-                    class="sidebar-mask"
-                    @click="toggleSidebar(false)"
-            ></div>
+                        <div
+                                class="sidebar-mask"
+                                @click="toggleSidebar(false)"
+                        ></div>
 
-<!--            <Sidebar
-                    :items="sidebarItems"
-                    @toggle-sidebar="toggleSidebar"
-            >
-                <slot
-                        name="sidebar-top"
-                        slot="top"
-                />
-                <slot
-                        name="sidebar-bottom"
-                        slot="bottom"
-                />
-            </Sidebar>-->
+                        <!--           <Sidebar
+                                            :items="sidebarItems"
+                                            @toggle-sidebar="toggleSidebar"
+                                    >
+                                        <slot
+                                                name="sidebar-top"
+                                                slot="top"
+                                        />
+                                        <slot
+                                                name="sidebar-bottom"
+                                                slot="bottom"
+                                        />
+                                    </Sidebar>-->
 
 
-            <Home v-if="$page.frontmatter.home"/>
+                        <Home v-if="$page.frontmatter.home"/>
 
-            <Page
-                    v-else
-                    :sidebar-items="sidebarItems"
-            >
-                <slot
-                        name="page-top"
-                        slot="top"
-                />
-                <slot
-                        name="page-bottom"
-                        slot="bottom"
-                />
-            </Page>
-        </div>
+                        <Page
+                                v-else
+                                :sidebar-items="sidebarItems"
+                        >
+                            <slot
+                                    name="page-top"
+                                    slot="top"
+                            />
+                            <slot
+                                    name="page-bottom"
+                                    slot="bottom"
+                            />
+                        </Page>
+                    </div>
+                </v-flex>
+            </v-layout>
+        </v-container>
         <Footer/>
     </v-app>
 </template>
