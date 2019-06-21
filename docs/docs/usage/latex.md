@@ -8,11 +8,9 @@ mathjax:
 ## MathJAX - $\LaTeX$
 
 ### Links
-[Docs](https://vuepress.github.io/en/plugins/mathjax/)
-
-[MathJax: LaTeX Basic Tutorial und Referenz (German)](https://www.mathelounge.de/509545/mathjax-latex-basic-tutorial-und-referenz-deutsch)
-
-[Basics of typesetting in MathJax](https://quantumcomputing.meta.stackexchange.com/questions/49/tutorial-how-to-use-tex-mathjax/76#76)
+- [Docs](https://vuepress.github.io/en/plugins/mathjax/)
+- [MathJax: LaTeX Basic Tutorial und Referenz (German)](https://www.mathelounge.de/509545/mathjax-latex-basic-tutorial-und-referenz-deutsch)
+- [Basics of typesetting in MathJax](https://quantumcomputing.meta.stackexchange.com/questions/49/tutorial-how-to-use-tex-mathjax/76#76)
 
 ### Inline Rendering
 ```

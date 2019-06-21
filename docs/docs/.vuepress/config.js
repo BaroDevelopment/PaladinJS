@@ -19,12 +19,15 @@ const config = {
 		}],
 		['script', { src: 'https://cdn.jsdelivr.net/npm/@widgetbot/crate@3', async: true, defer: true }, `
 			const button = new Crate({
-			location: ['bottom', 'right'],
+			location: ['bottom', 'left'],
 			server: '391946504509587476',
 			channel: '501484507585708038',
 			shard: 'https://disweb.deploys.io'
 			})
-			button.notify('Need a hand? Leave a message!')
+			button.notify({
+			content: 'Need a hand? Leave a message!',
+			timeout: 3000,
+			})
 		`],
 	],
 	plugins: [

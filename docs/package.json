@@ -9,16 +9,16 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.0.1",
-    "@vuepress/plugin-medium-zoom": "^1.0.1",
-    "@vuepress/plugin-nprogress": "^1.0.1",
+    "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
+    "@vuepress/plugin-medium-zoom": "^1.0.0-rc.1",
+    "@vuepress/plugin-nprogress": "^1.0.0-rc.1",
     "css-loader": "^2.1.1",
-    "vuepress": "^1.0.0"
+    "vuepress": "^1.0.1",
+    "vuepress-plugin-mathjax": "^1.2.4"
   },
   "dependencies": {
     "semver": "^6.1.1",
     "vue-tabs-component": "^1.5.0",
-    "vuepress-plugin-mathjax": "^1.2.4",
     "vuepress-plugin-tabs": "^0.2.2",
     "vuetify": "^1.5.16"
   }

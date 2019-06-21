@@ -1,36 +1,42 @@
 <template>
-    <main class="page">
-        <slot name="top"/>
-        <Content/>
-        <footer class="page-edit">
-            <div class="edit-link" v-if="editLink">
-                <a :href="editLink" target="_blank" rel="noopener noreferrer">{{ editLinkText }}</a>
-                <OutboundLink/>
-            </div>
+    <v-container>
+        <v-layout align-center justify-center row wrap>
+            <v-flex xs10 sm10 md10 lg9 xl8>
+                <main class="page">
+                    <slot name="top"/>
+                    <Content/>
+                    <footer class="page-edit">
+                        <div class="edit-link" v-if="editLink">
+                            <a :href="editLink" target="_blank" rel="noopener noreferrer">{{ editLinkText }}</a>
+                            <OutboundLink/>
+                        </div>
 
-            <div class="last-updated" v-if="lastUpdated">
-                <span class="prefix">{{ lastUpdatedText }}: </span>
-                <span class="time">{{ lastUpdated }}</span>
-            </div>
-        </footer>
-        <div class="page-nav" v-if="prev || next">
-            <p class="inner">
+                        <div class="last-updated" v-if="lastUpdated">
+                            <span class="prefix">{{ lastUpdatedText }}: </span>
+                            <span class="time">{{ lastUpdated }}</span>
+                        </div>
+                    </footer>
+                    <div class="page-nav" v-if="prev || next">
+                        <p class="inner">
                 <span v-if="prev" class="prev">
                   <v-icon>fas fa-arrow-left</v-icon>
                   <router-link v-if="prev" class="prev" :to="prev.path">
                     {{ prev.title || prev.path }}
                   </router-link>
                 </span>
-                <span v-if="next" class="next">
+                            <span v-if="next" class="next">
                   <router-link v-if="next" :to="next.path">
                     {{ next.title || next.path }}
                   </router-link>
                   <v-icon>fas fa-arrow-right</v-icon>
                 </span>
-            </p>
-        </div>
-        <slot name="bottom"/>
-    </main>
+                        </p>
+                    </div>
+                    <slot name="bottom"/>
+                </main>
+            </v-flex>
+        </v-layout>
+    </v-container>
 </template>
 
 <script>
@@ -177,7 +183,7 @@
         display block
 
     .page-edit
-        @extend $wrapper
+        //@extend $wrapper
         padding-top 1rem
         padding-bottom 1rem
         overflow auto
@@ -202,7 +208,7 @@
                 color #aaa
 
     .page-nav
-        @extend $wrapper
+        //@extend $wrapper
         padding-top 1rem
         padding-bottom 0
 

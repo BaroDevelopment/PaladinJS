@@ -1,4 +1,4 @@
-# Google Command
+## Google Command
 Get an overview about Paladin Stats
 
 ### User Permissions needed
